@@ -30,9 +30,9 @@ namespace Antamina.ApiHost.Controllers
 
         [HttpGet]
         [Route("GetNotificationByID")]
-        public async Task<ActionResult> GetNotificationByID(long sap_Client_ID)
+        public async Task<ActionResult> GetNotificationByID(string notificationID,  long sap_Client_ID)
         {
-            var response = await _serviceClient.GetNotificationByID(sap_Client_ID);
+            var response = await _serviceClient.GetNotificationByID(notificationID, sap_Client_ID);
             return Ok(response);
         }
 

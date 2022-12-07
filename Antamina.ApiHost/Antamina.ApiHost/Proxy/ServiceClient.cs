@@ -51,7 +51,7 @@ namespace Antamina.ApiHost.Proxy
             }
             return response;
         }
-        public async Task<GetNotificationByIDResponse> GetNotificationByID(long sap_Client_ID)
+        public async Task<GetNotificationByIDResponse> GetNotificationByID(string notificationID, long sap_Client_ID)
         {
             GetNotificationByIDResponse response = null;
             try
@@ -59,7 +59,7 @@ namespace Antamina.ApiHost.Proxy
                 var authenticationString = $"{_credential.UserName}:{_credential.UserPassword}";
                 var base64String = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(authenticationString));
 
-                var requestMessage = new HttpRequestMessage(HttpMethod.Get, String.Format(_urlApis.GetNotificationByID, sap_Client_ID));
+                var requestMessage = new HttpRequestMessage(HttpMethod.Get, String.Format(_urlApis.GetNotificationByID, notificationID, sap_Client_ID));
                 requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Basic", base64String);
 
                 using (var httpClient = new HttpClient())
