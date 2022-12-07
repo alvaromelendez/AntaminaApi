@@ -1,0 +1,8 @@
+# Ignore any files in /bin and /obj Folders
+*.suo
+*.user
+**/bin/*
+**/obj/*
+
+# Visual Studio cache/options directory
+.vs/
