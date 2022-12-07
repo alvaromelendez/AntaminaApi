@@ -346,24 +346,29 @@ namespace Antamina.ApiHost.Entities.DTO
         [JsonPropertyName("to_Partner")]
         public ToPartner ToPartner { get; set; }
     }
-
-    public class GetNotificationResponse
+    public class GetNotificationAllResponse
     {
         [JsonPropertyName("d")]
         public Data Data { get; set; }
     }
-
+    public class GetNotificationByIDResponse
+    {
+        [JsonPropertyName("d")]
+        public Result Result { get; set; }
+    }
+    //public class CreateNotificationResponse
+    //{
+    //    public int Code { get; set; }
+    //    public string Message { get; set; }
+    //}
     public class ToItem
     {
         [JsonPropertyName("__deferred")]
         public Deferred Deferred { get; set; }
     }
-
     public class ToPartner
     {
         [JsonPropertyName("__deferred")]
         public Deferred Deferred { get; set; }
     }
-
-
 }
