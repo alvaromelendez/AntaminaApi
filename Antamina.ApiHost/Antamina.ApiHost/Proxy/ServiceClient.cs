@@ -51,7 +51,7 @@ namespace Antamina.ApiHost.Proxy
             }
             return response;
         }
-        public async Task<GetNotificationByIDResponse> GetNotificationByID()
+        public async Task<GetNotificationByIDResponse> GetNotificationByID(long sap_Client_ID)
         {
             GetNotificationByIDResponse response = null;
             try
@@ -59,7 +59,7 @@ namespace Antamina.ApiHost.Proxy
                 var authenticationString = $"{_credential.UserName}:{_credential.UserPassword}";
                 var base64String = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(authenticationString));
 
-                var requestMessage = new HttpRequestMessage(HttpMethod.Get, _urlApis.GetNotificationByID);
+                var requestMessage = new HttpRequestMessage(HttpMethod.Get, String.Format(_urlApis.GetNotificationByID, sap_Client_ID));
                 requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Basic", base64String);
 
                 using (var httpClient = new HttpClient())
@@ -82,7 +82,7 @@ namespace Antamina.ApiHost.Proxy
             }
             return response;
         }
-        public async Task<string> CreateNotification(string request)
+        public async Task<string> CreateNotification(string request, string xCSRF_Token)
         {
             string response = string.Empty;
             try
@@ -93,6 +93,7 @@ namespace Antamina.ApiHost.Proxy
                 {
                     httpClient.BaseAddress = new Uri(_urlApis.CreateNotification);
                     httpClient.DefaultRequestHeaders.Add("Authorization", $"Basic {base64String}");
+                    httpClient.DefaultRequestHeaders.Add("X-CSRF-Token", xCSRF_Token);
 
                     var httpResponse = await httpClient.PostAsync(_urlApis.CreateNotification, new StringContent(request, Encoding.UTF8, "application/json"));
                     response = await httpResponse.Content.ReadAsStringAsync();

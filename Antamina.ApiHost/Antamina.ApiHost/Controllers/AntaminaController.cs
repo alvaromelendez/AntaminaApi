@@ -30,9 +30,9 @@ namespace Antamina.ApiHost.Controllers
 
         [HttpGet]
         [Route("GetNotificationByID")]
-        public async Task<ActionResult> GetNotificationByID()
+        public async Task<ActionResult> GetNotificationByID(long sap_Client_ID)
         {
-            var response = await _serviceClient.GetNotificationByID();
+            var response = await _serviceClient.GetNotificationByID(sap_Client_ID);
             return Ok(response);
         }
 
@@ -40,7 +40,7 @@ namespace Antamina.ApiHost.Controllers
         [Route("CreateNotification")]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult> CreateNotification()
+        public async Task<ActionResult> CreateNotification(string xCSRF_Token)
         {
             CreateNotificationRequest createNotificationRequest = new CreateNotificationRequest()
             {
@@ -57,7 +57,7 @@ namespace Antamina.ApiHost.Controllers
                 ReportedByUser = "CVALES"
             };
             string request = System.Text.Json.JsonSerializer.Serialize(createNotificationRequest);
-            var response = await _serviceClient.CreateNotification(request);
+            var response = await _serviceClient.CreateNotification(request, xCSRF_Token);
             return Ok(response);
         }
     }
