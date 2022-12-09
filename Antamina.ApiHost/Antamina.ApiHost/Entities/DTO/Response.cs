@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
 namespace Antamina.ApiHost.Entities.DTO
 {
@@ -356,11 +357,6 @@ namespace Antamina.ApiHost.Entities.DTO
         [JsonPropertyName("d")]
         public Result Result { get; set; }
     }
-    //public class CreateNotificationResponse
-    //{
-    //    public int Code { get; set; }
-    //    public string Message { get; set; }
-    //}
     public class ToItem
     {
         [JsonPropertyName("__deferred")]
@@ -371,4 +367,93 @@ namespace Antamina.ApiHost.Entities.DTO
         [JsonPropertyName("__deferred")]
         public Deferred Deferred { get; set; }
     }
+
+
+
+
+    [XmlRoot(ElementName = "message", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class Message
+    {
+        [XmlAttribute(AttributeName = "lang", Namespace = "http://www.w3.org/XML/1998/namespace")]
+        public string Lang { get; set; }
+        [XmlText]
+        public string Text { get; set; }
+    }
+
+    [XmlRoot(ElementName = "application", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class Application
+    {
+        [XmlElement(ElementName = "component_id", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Component_id { get; set; }
+        [XmlElement(ElementName = "service_namespace", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Service_namespace { get; set; }
+        [XmlElement(ElementName = "service_id", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Service_id { get; set; }
+        [XmlElement(ElementName = "service_version", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Service_version { get; set; }
+    }
+
+    [XmlRoot(ElementName = "Error_Resolution", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class Error_Resolution
+    {
+        [XmlElement(ElementName = "SAP_Transaction", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string SAP_Transaction { get; set; }
+        [XmlElement(ElementName = "SAP_Note", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string SAP_Note { get; set; }
+    }
+
+    [XmlRoot(ElementName = "errordetail", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class Errordetail
+    {
+        [XmlElement(ElementName = "ContentID", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string ContentID { get; set; }
+        [XmlElement(ElementName = "code", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Code { get; set; }
+        [XmlElement(ElementName = "message", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Message { get; set; }
+        [XmlElement(ElementName = "propertyref", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Propertyref { get; set; }
+        [XmlElement(ElementName = "severity", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Severity { get; set; }
+        [XmlElement(ElementName = "target", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Target { get; set; }
+        [XmlElement(ElementName = "transition", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Transition { get; set; }
+    }
+
+    [XmlRoot(ElementName = "errordetails", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class Errordetails
+    {
+        [XmlElement(ElementName = "errordetail", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public Errordetail Errordetail { get; set; }
+    }
+
+    [XmlRoot(ElementName = "innererror", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class Innererror
+    {
+        [XmlElement(ElementName = "application", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public Application Application { get; set; }
+        [XmlElement(ElementName = "transactionid", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Transactionid { get; set; }
+        [XmlElement(ElementName = "timestamp", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Timestamp { get; set; }
+        [XmlElement(ElementName = "Error_Resolution", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public Error_Resolution Error_Resolution { get; set; }
+        [XmlElement(ElementName = "errordetails", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public Errordetails Errordetails { get; set; }
+    }
+
+    [XmlRoot(ElementName = "error", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+    public class CreateNotificationResponse
+    {
+        [XmlElement(ElementName = "code", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public string Code { get; set; }
+        [XmlElement(ElementName = "message", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public Message Message { get; set; }
+        [XmlElement(ElementName = "innererror", Namespace = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata")]
+        public Innererror Innererror { get; set; }
+        [XmlAttribute(AttributeName = "xmlns")]
+        public string Xmlns { get; set; }
+    }
+
 }

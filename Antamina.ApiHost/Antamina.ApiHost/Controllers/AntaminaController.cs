@@ -40,24 +40,24 @@ namespace Antamina.ApiHost.Controllers
         [Route("CreateNotification")]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult> CreateNotification(string xCSRF_Token)
+        public async Task<ActionResult> CreateNotification(string xCSRF_Token, string cookie)
         {
             CreateNotificationRequest createNotificationRequest = new CreateNotificationRequest()
             {
                 NotificationText = "Notification Test CV 10-11-2022 B",
-                MaintPriority = 2,
+                MaintPriority = "2",
                 NotificationType = "M2",
-                MalfunctionStartDate = DateTime.Now,
+                MalfunctionStartDate = "2022-11-10T00:00:00",
                 MalfunctionStartTime = "PT23H15M19S",
                 NotificationTimeZone = "UTC-5",
                 TechnicalObject = "?0100000000000001788",
                 TechObjIsEquipOrFuncnlLoc = "EAMS_FL",
-                MaintenanceObjectIsDown = true,
+                MaintenanceObjectIsDown = "true",
                 MainWorkCenter = "MECAMIO",
                 ReportedByUser = "CVALES"
             };
-            string request = System.Text.Json.JsonSerializer.Serialize(createNotificationRequest);
-            var response = await _serviceClient.CreateNotification(request, xCSRF_Token);
+            string request = Common.Extension.GenerateXML(createNotificationRequest);
+            var response = await _serviceClient.CreateNotification(request, xCSRF_Token, cookie);
             return Ok(response);
         }
     }

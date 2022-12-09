@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Options;
 using Microsoft.VisualBasic;
+using System;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using System.Xml.Serialization;
 
 namespace Antamina.ApiHost.Proxy
 {
@@ -82,9 +84,9 @@ namespace Antamina.ApiHost.Proxy
             }
             return response;
         }
-        public async Task<string> CreateNotification(string request, string xCSRF_Token)
+        public async Task<CreateNotificationResponse> CreateNotification(string request, string xCSRF_Token, string cookie)
         {
-            string response = string.Empty;
+            CreateNotificationResponse response = null;
             try
             {
                 var authenticationString = $"{_credential.UserName}:{_credential.UserPassword}";
@@ -94,16 +96,16 @@ namespace Antamina.ApiHost.Proxy
                     httpClient.BaseAddress = new Uri(_urlApis.CreateNotification);
                     httpClient.DefaultRequestHeaders.Add("Authorization", $"Basic {base64String}");
                     httpClient.DefaultRequestHeaders.Add("X-CSRF-Token", xCSRF_Token);
+                    httpClient.DefaultRequestHeaders.Add("Cookie", cookie);
 
-                    var httpResponse = await httpClient.PostAsync(_urlApis.CreateNotification, new StringContent(request, Encoding.UTF8, "application/json"));
-                    response = await httpResponse.Content.ReadAsStringAsync();
-                    httpResponse.EnsureSuccessStatusCode();
+                    var httpResponse = await httpClient.PostAsync(_urlApis.CreateNotification, new StringContent(request, Encoding.UTF8, "application/xml"));
+                    response = Extension.DeserializeResponseXML<CreateNotificationResponse>(await httpResponse.Content.ReadAsStringAsync());
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception($"Message: {response}");
+                throw ex;
             }
             return response;
         }
