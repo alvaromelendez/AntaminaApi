@@ -1,0 +1,112 @@
+﻿namespace GMM.Domain.Entities
+{
+    public class Notification : IGenerateEntity<Notification>
+    {
+        public Guid IdNotice { get; set; }
+        public int MaintenanceNotification { get; set; }
+        public string MaintNotifInternalID { get; set; }
+        public string NotificationText { get; set; }
+        public object MaintPriority { get; set; }
+        public string NotificationType { get; set; }
+        public int NotifProcessingPhase { get; set; }
+        public string NotifProcessingPhaseDesc { get; set; }
+        public string MaintPriorityDesc { get; set; }
+        public DateTime CreationDate { get; set; }
+        public string LastChangeTime { get; set; }
+        public DateTime LastChangeDate { get; set; }
+        public DateTime LastChangeDateTime { get; set; }
+        public string CreationTime { get; set; }
+        public string ReportedByUser { get; set; }
+        public string ReporterFullName { get; set; }
+        public object PersonResponsible { get; set; }
+        public object MalfunctionEffect { get; set; }
+        public string MalfunctionEffectText { get; set; }
+        public object MalfunctionStartDate { get; set; }
+        public string MalfunctionStartTime { get; set; }
+        public object MalfunctionEndDate { get; set; }
+        public string MalfunctionEndTime { get; set; }
+        public string MaintNotificationCatalog { get; set; }
+        public object MaintNotificationCode { get; set; }
+        public string MaintNotificationCodeGroup { get; set; }
+        public object CatalogProfile { get; set; }
+        public DateTime NotificationCreationDate { get; set; }
+        public string NotificationCreationTime { get; set; }
+        public string NotificationTimeZone { get; set; }
+        public object RequiredStartDate { get; set; }
+        public string RequiredStartTime { get; set; }
+        public object RequiredEndDate { get; set; }
+        public string RequiredEndTime { get; set; }
+        public string LatestAcceptableCompletionDate { get; set; }
+        public bool MaintenanceObjectIsDown { get; set; }
+        public string MaintNotificationLongText { get; set; }
+        public string MaintNotifLongTextForEdit { get; set; }
+        public object TechnicalObject { get; set; }
+        public string TechObjIsEquipOrFuncnlLoc { get; set; }
+        public object TechnicalObjectLabel { get; set; }
+        public object MaintenancePlanningPlant { get; set; }
+        public string MaintenancePlannerGroup { get; set; }
+        public object PlantSection { get; set; }
+        public object ABCIndicator { get; set; }
+        public string SuperiorTechnicalObject { get; set; }
+        public string SuperiorTechnicalObjectName { get; set; }
+        public string SuperiorObjIsEquipOrFuncnlLoc { get; set; }
+        public string SuperiorTechnicalObjectLabel { get; set; }
+        public string ManufacturerPartTypeName { get; set; }
+        public string TechObjIsEquipOrFuncnlLocDesc { get; set; }
+        public string FunctionalLocation { get; set; }
+        public string FunctionalLocationLabelName { get; set; }
+        public string TechnicalObjectDescription { get; set; }
+        public string AssetLocation { get; set; }
+        public string LocationName { get; set; }
+        public string BusinessArea { get; set; }
+        public string CompanyCode { get; set; }
+        public string TechnicalObjectCategory { get; set; }
+        public string TechnicalObjectType { get; set; }
+        public int MainWorkCenterPlant { get; set; }
+        public string MainWorkCenter { get; set; }
+        public string PlantName { get; set; }
+        public string MaintenancePlannerGroupName { get; set; }
+        public object MaintenancePlant { get; set; }
+        public string LocationDescription { get; set; }
+        public string MainWorkCenterText { get; set; }
+        public string MainWorkCenterPlantName { get; set; }
+        public string MaintenancePlantName { get; set; }
+        public string PlantSectionPersonRespName { get; set; }
+        public string ABCIndicatorDesc { get; set; }
+        public string PersonResponsibleName { get; set; }
+        public object MaintenanceOrder { get; set; }
+        public string MaintenanceOrderType { get; set; }
+        public string ConcatenatedActiveSystStsName { get; set; }
+        public object MaintenanceActivityType { get; set; }
+        public string MaintObjDowntimeDurationUnit { get; set; }
+        public double MaintObjectDowntimeDuration { get; set; }
+        public string MaintenancePlan { get; set; }
+        public string MaintenanceItem { get; set; }
+        public string TaskListGroup { get; set; }
+        public string TaskListGroupCounter { get; set; }
+        public int MaintenancePlanCallNumber { get; set; }
+        public string MaintenanceTaskListType { get; set; }
+        public string TaskList { get; set; }
+        public DateTime NotificationReferenceDate { get; set; }
+        public string NotificationReferenceTime { get; set; }
+        public object NotificationCompletionDate { get; set; }
+        public string CompletionTime { get; set; }
+        public string AssetRoom { get; set; }
+        public string MaintNotifExtReferenceNumber { get; set; }
+        public string MaintNotifRejectionReasonCode { get; set; }
+        public string MaintNotifRejectionRsnCodeTxt { get; set; }
+        public string MaintNotifDetectionCatalog { get; set; }
+        public string MaintNotifDetectionCode { get; set; }
+        public string MaintNotifDetectionCodeText { get; set; }
+        public string MaintNotifDetectionCodeGroup { get; set; }
+        public string MaintNotifDetectionCodeGrpTxt { get; set; }
+        public string MaintNotifProcessPhaseCode { get; set; }
+        public string MaintNotifProcessSubPhaseCode { get; set; }
+        public string EAMProcessPhaseCodeDesc { get; set; }
+        public string EAMProcessSubPhaseCodeDesc { get; set; }
+        public Notification RecoverKey()
+        {
+            return new Notification() { IdNotice = this.IdNotice };
+        }
+    }
+}
