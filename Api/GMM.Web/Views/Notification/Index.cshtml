@@ -1,0 +1,71 @@
+﻿@model IEnumerable<GMM.Web.Models.NotificationResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Notification
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                NotifProcessingPhase
+            </th>
+            <th>
+                Priority
+            </th>
+            <th>
+                SuperiorTechnical
+            </th>
+            <th>
+                MainWorkCenter
+            </th>
+            <th>
+                PlantName
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.MaintenanceNotification)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.NotificationText)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.NotifProcessingPhaseDesc)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.MaintPriorityDesc)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.SuperiorTechnicalObjectName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.MainWorkCenter)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.PlantName)
+            </td>            
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IdNotification }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IdNotification }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdNotification })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

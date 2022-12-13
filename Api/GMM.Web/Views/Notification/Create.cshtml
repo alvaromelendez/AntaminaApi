@@ -1,0 +1,538 @@
+﻿@model GMM.Web.Models.NotificationResponse
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ModelNotification</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdNotification" class="control-label"></label>
+                <input asp-for="IdNotification" class="form-control" />
+                <span asp-validation-for="IdNotification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenanceNotification" class="control-label"></label>
+                <input asp-for="MaintenanceNotification" class="form-control" />
+                <span asp-validation-for="MaintenanceNotification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifInternalID" class="control-label"></label>
+                <input asp-for="MaintNotifInternalID" class="form-control" />
+                <span asp-validation-for="MaintNotifInternalID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationText" class="control-label"></label>
+                <input asp-for="NotificationText" class="form-control" />
+                <span asp-validation-for="NotificationText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintPriority" class="control-label"></label>
+                <input asp-for="MaintPriority" class="form-control" />
+                <span asp-validation-for="MaintPriority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationType" class="control-label"></label>
+                <input asp-for="NotificationType" class="form-control" />
+                <span asp-validation-for="NotificationType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotifProcessingPhase" class="control-label"></label>
+                <input asp-for="NotifProcessingPhase" class="form-control" />
+                <span asp-validation-for="NotifProcessingPhase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotifProcessingPhaseDesc" class="control-label"></label>
+                <input asp-for="NotifProcessingPhaseDesc" class="form-control" />
+                <span asp-validation-for="NotifProcessingPhaseDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintPriorityDesc" class="control-label"></label>
+                <input asp-for="MaintPriorityDesc" class="form-control" />
+                <span asp-validation-for="MaintPriorityDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreationDate" class="control-label"></label>
+                <input asp-for="CreationDate" class="form-control" />
+                <span asp-validation-for="CreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastChangeTime" class="control-label"></label>
+                <input asp-for="LastChangeTime" class="form-control" />
+                <span asp-validation-for="LastChangeTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastChangeDate" class="control-label"></label>
+                <input asp-for="LastChangeDate" class="form-control" />
+                <span asp-validation-for="LastChangeDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastChangeDateTime" class="control-label"></label>
+                <input asp-for="LastChangeDateTime" class="form-control" />
+                <span asp-validation-for="LastChangeDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreationTime" class="control-label"></label>
+                <input asp-for="CreationTime" class="form-control" />
+                <span asp-validation-for="CreationTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReportedByUser" class="control-label"></label>
+                <input asp-for="ReportedByUser" class="form-control" />
+                <span asp-validation-for="ReportedByUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReporterFullName" class="control-label"></label>
+                <input asp-for="ReporterFullName" class="form-control" />
+                <span asp-validation-for="ReporterFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonResponsible" class="control-label"></label>
+                <input asp-for="PersonResponsible" class="form-control" />
+                <span asp-validation-for="PersonResponsible" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalfunctionEffect" class="control-label"></label>
+                <input asp-for="MalfunctionEffect" class="form-control" />
+                <span asp-validation-for="MalfunctionEffect" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalfunctionEffectText" class="control-label"></label>
+                <input asp-for="MalfunctionEffectText" class="form-control" />
+                <span asp-validation-for="MalfunctionEffectText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalfunctionStartDate" class="control-label"></label>
+                <input asp-for="MalfunctionStartDate" class="form-control" />
+                <span asp-validation-for="MalfunctionStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalfunctionStartTime" class="control-label"></label>
+                <input asp-for="MalfunctionStartTime" class="form-control" />
+                <span asp-validation-for="MalfunctionStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalfunctionEndDate" class="control-label"></label>
+                <input asp-for="MalfunctionEndDate" class="form-control" />
+                <span asp-validation-for="MalfunctionEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MalfunctionEndTime" class="control-label"></label>
+                <input asp-for="MalfunctionEndTime" class="form-control" />
+                <span asp-validation-for="MalfunctionEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotificationCatalog" class="control-label"></label>
+                <input asp-for="MaintNotificationCatalog" class="form-control" />
+                <span asp-validation-for="MaintNotificationCatalog" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotificationCode" class="control-label"></label>
+                <input asp-for="MaintNotificationCode" class="form-control" />
+                <span asp-validation-for="MaintNotificationCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotificationCodeGroup" class="control-label"></label>
+                <input asp-for="MaintNotificationCodeGroup" class="form-control" />
+                <span asp-validation-for="MaintNotificationCodeGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CatalogProfile" class="control-label"></label>
+                <input asp-for="CatalogProfile" class="form-control" />
+                <span asp-validation-for="CatalogProfile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationCreationDate" class="control-label"></label>
+                <input asp-for="NotificationCreationDate" class="form-control" />
+                <span asp-validation-for="NotificationCreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationCreationTime" class="control-label"></label>
+                <input asp-for="NotificationCreationTime" class="form-control" />
+                <span asp-validation-for="NotificationCreationTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationTimeZone" class="control-label"></label>
+                <input asp-for="NotificationTimeZone" class="form-control" />
+                <span asp-validation-for="NotificationTimeZone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequiredStartDate" class="control-label"></label>
+                <input asp-for="RequiredStartDate" class="form-control" />
+                <span asp-validation-for="RequiredStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequiredStartTime" class="control-label"></label>
+                <input asp-for="RequiredStartTime" class="form-control" />
+                <span asp-validation-for="RequiredStartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequiredEndDate" class="control-label"></label>
+                <input asp-for="RequiredEndDate" class="form-control" />
+                <span asp-validation-for="RequiredEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequiredEndTime" class="control-label"></label>
+                <input asp-for="RequiredEndTime" class="form-control" />
+                <span asp-validation-for="RequiredEndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LatestAcceptableCompletionDate" class="control-label"></label>
+                <input asp-for="LatestAcceptableCompletionDate" class="form-control" />
+                <span asp-validation-for="LatestAcceptableCompletionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MaintenanceObjectIsDown" /> @Html.DisplayNameFor(model => model.MaintenanceObjectIsDown)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotificationLongText" class="control-label"></label>
+                <input asp-for="MaintNotificationLongText" class="form-control" />
+                <span asp-validation-for="MaintNotificationLongText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifLongTextForEdit" class="control-label"></label>
+                <input asp-for="MaintNotifLongTextForEdit" class="form-control" />
+                <span asp-validation-for="MaintNotifLongTextForEdit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnicalObject" class="control-label"></label>
+                <input asp-for="TechnicalObject" class="form-control" />
+                <span asp-validation-for="TechnicalObject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechObjIsEquipOrFuncnlLoc" class="control-label"></label>
+                <input asp-for="TechObjIsEquipOrFuncnlLoc" class="form-control" />
+                <span asp-validation-for="TechObjIsEquipOrFuncnlLoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnicalObjectLabel" class="control-label"></label>
+                <input asp-for="TechnicalObjectLabel" class="form-control" />
+                <span asp-validation-for="TechnicalObjectLabel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlanningPlant" class="control-label"></label>
+                <input asp-for="MaintenancePlanningPlant" class="form-control" />
+                <span asp-validation-for="MaintenancePlanningPlant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlannerGroup" class="control-label"></label>
+                <input asp-for="MaintenancePlannerGroup" class="form-control" />
+                <span asp-validation-for="MaintenancePlannerGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantSection" class="control-label"></label>
+                <input asp-for="PlantSection" class="form-control" />
+                <span asp-validation-for="PlantSection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ABCIndicator" class="control-label"></label>
+                <input asp-for="ABCIndicator" class="form-control" />
+                <span asp-validation-for="ABCIndicator" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperiorTechnicalObject" class="control-label"></label>
+                <input asp-for="SuperiorTechnicalObject" class="form-control" />
+                <span asp-validation-for="SuperiorTechnicalObject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperiorTechnicalObjectName" class="control-label"></label>
+                <input asp-for="SuperiorTechnicalObjectName" class="form-control" />
+                <span asp-validation-for="SuperiorTechnicalObjectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperiorObjIsEquipOrFuncnlLoc" class="control-label"></label>
+                <input asp-for="SuperiorObjIsEquipOrFuncnlLoc" class="form-control" />
+                <span asp-validation-for="SuperiorObjIsEquipOrFuncnlLoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperiorTechnicalObjectLabel" class="control-label"></label>
+                <input asp-for="SuperiorTechnicalObjectLabel" class="form-control" />
+                <span asp-validation-for="SuperiorTechnicalObjectLabel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufacturerPartTypeName" class="control-label"></label>
+                <input asp-for="ManufacturerPartTypeName" class="form-control" />
+                <span asp-validation-for="ManufacturerPartTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechObjIsEquipOrFuncnlLocDesc" class="control-label"></label>
+                <input asp-for="TechObjIsEquipOrFuncnlLocDesc" class="form-control" />
+                <span asp-validation-for="TechObjIsEquipOrFuncnlLocDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunctionalLocation" class="control-label"></label>
+                <input asp-for="FunctionalLocation" class="form-control" />
+                <span asp-validation-for="FunctionalLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FunctionalLocationLabelName" class="control-label"></label>
+                <input asp-for="FunctionalLocationLabelName" class="form-control" />
+                <span asp-validation-for="FunctionalLocationLabelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnicalObjectDescription" class="control-label"></label>
+                <input asp-for="TechnicalObjectDescription" class="form-control" />
+                <span asp-validation-for="TechnicalObjectDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssetLocation" class="control-label"></label>
+                <input asp-for="AssetLocation" class="form-control" />
+                <span asp-validation-for="AssetLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationName" class="control-label"></label>
+                <input asp-for="LocationName" class="form-control" />
+                <span asp-validation-for="LocationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusinessArea" class="control-label"></label>
+                <input asp-for="BusinessArea" class="form-control" />
+                <span asp-validation-for="BusinessArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyCode" class="control-label"></label>
+                <input asp-for="CompanyCode" class="form-control" />
+                <span asp-validation-for="CompanyCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnicalObjectCategory" class="control-label"></label>
+                <input asp-for="TechnicalObjectCategory" class="form-control" />
+                <span asp-validation-for="TechnicalObjectCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TechnicalObjectType" class="control-label"></label>
+                <input asp-for="TechnicalObjectType" class="form-control" />
+                <span asp-validation-for="TechnicalObjectType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainWorkCenterPlant" class="control-label"></label>
+                <input asp-for="MainWorkCenterPlant" class="form-control" />
+                <span asp-validation-for="MainWorkCenterPlant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainWorkCenter" class="control-label"></label>
+                <input asp-for="MainWorkCenter" class="form-control" />
+                <span asp-validation-for="MainWorkCenter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantName" class="control-label"></label>
+                <input asp-for="PlantName" class="form-control" />
+                <span asp-validation-for="PlantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlannerGroupName" class="control-label"></label>
+                <input asp-for="MaintenancePlannerGroupName" class="form-control" />
+                <span asp-validation-for="MaintenancePlannerGroupName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlant" class="control-label"></label>
+                <input asp-for="MaintenancePlant" class="form-control" />
+                <span asp-validation-for="MaintenancePlant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationDescription" class="control-label"></label>
+                <input asp-for="LocationDescription" class="form-control" />
+                <span asp-validation-for="LocationDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainWorkCenterText" class="control-label"></label>
+                <input asp-for="MainWorkCenterText" class="form-control" />
+                <span asp-validation-for="MainWorkCenterText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainWorkCenterPlantName" class="control-label"></label>
+                <input asp-for="MainWorkCenterPlantName" class="form-control" />
+                <span asp-validation-for="MainWorkCenterPlantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlantName" class="control-label"></label>
+                <input asp-for="MaintenancePlantName" class="form-control" />
+                <span asp-validation-for="MaintenancePlantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantSectionPersonRespName" class="control-label"></label>
+                <input asp-for="PlantSectionPersonRespName" class="form-control" />
+                <span asp-validation-for="PlantSectionPersonRespName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ABCIndicatorDesc" class="control-label"></label>
+                <input asp-for="ABCIndicatorDesc" class="form-control" />
+                <span asp-validation-for="ABCIndicatorDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonResponsibleName" class="control-label"></label>
+                <input asp-for="PersonResponsibleName" class="form-control" />
+                <span asp-validation-for="PersonResponsibleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenanceOrder" class="control-label"></label>
+                <input asp-for="MaintenanceOrder" class="form-control" />
+                <span asp-validation-for="MaintenanceOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenanceOrderType" class="control-label"></label>
+                <input asp-for="MaintenanceOrderType" class="form-control" />
+                <span asp-validation-for="MaintenanceOrderType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConcatenatedActiveSystStsName" class="control-label"></label>
+                <input asp-for="ConcatenatedActiveSystStsName" class="form-control" />
+                <span asp-validation-for="ConcatenatedActiveSystStsName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenanceActivityType" class="control-label"></label>
+                <input asp-for="MaintenanceActivityType" class="form-control" />
+                <span asp-validation-for="MaintenanceActivityType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintObjDowntimeDurationUnit" class="control-label"></label>
+                <input asp-for="MaintObjDowntimeDurationUnit" class="form-control" />
+                <span asp-validation-for="MaintObjDowntimeDurationUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintObjectDowntimeDuration" class="control-label"></label>
+                <input asp-for="MaintObjectDowntimeDuration" class="form-control" />
+                <span asp-validation-for="MaintObjectDowntimeDuration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlan" class="control-label"></label>
+                <input asp-for="MaintenancePlan" class="form-control" />
+                <span asp-validation-for="MaintenancePlan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenanceItem" class="control-label"></label>
+                <input asp-for="MaintenanceItem" class="form-control" />
+                <span asp-validation-for="MaintenanceItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskListGroup" class="control-label"></label>
+                <input asp-for="TaskListGroup" class="form-control" />
+                <span asp-validation-for="TaskListGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskListGroupCounter" class="control-label"></label>
+                <input asp-for="TaskListGroupCounter" class="form-control" />
+                <span asp-validation-for="TaskListGroupCounter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenancePlanCallNumber" class="control-label"></label>
+                <input asp-for="MaintenancePlanCallNumber" class="form-control" />
+                <span asp-validation-for="MaintenancePlanCallNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintenanceTaskListType" class="control-label"></label>
+                <input asp-for="MaintenanceTaskListType" class="form-control" />
+                <span asp-validation-for="MaintenanceTaskListType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskList" class="control-label"></label>
+                <input asp-for="TaskList" class="form-control" />
+                <span asp-validation-for="TaskList" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationReferenceDate" class="control-label"></label>
+                <input asp-for="NotificationReferenceDate" class="form-control" />
+                <span asp-validation-for="NotificationReferenceDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationReferenceTime" class="control-label"></label>
+                <input asp-for="NotificationReferenceTime" class="form-control" />
+                <span asp-validation-for="NotificationReferenceTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotificationCompletionDate" class="control-label"></label>
+                <input asp-for="NotificationCompletionDate" class="form-control" />
+                <span asp-validation-for="NotificationCompletionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletionTime" class="control-label"></label>
+                <input asp-for="CompletionTime" class="form-control" />
+                <span asp-validation-for="CompletionTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssetRoom" class="control-label"></label>
+                <input asp-for="AssetRoom" class="form-control" />
+                <span asp-validation-for="AssetRoom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifExtReferenceNumber" class="control-label"></label>
+                <input asp-for="MaintNotifExtReferenceNumber" class="form-control" />
+                <span asp-validation-for="MaintNotifExtReferenceNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifRejectionReasonCode" class="control-label"></label>
+                <input asp-for="MaintNotifRejectionReasonCode" class="form-control" />
+                <span asp-validation-for="MaintNotifRejectionReasonCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifRejectionRsnCodeTxt" class="control-label"></label>
+                <input asp-for="MaintNotifRejectionRsnCodeTxt" class="form-control" />
+                <span asp-validation-for="MaintNotifRejectionRsnCodeTxt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifDetectionCatalog" class="control-label"></label>
+                <input asp-for="MaintNotifDetectionCatalog" class="form-control" />
+                <span asp-validation-for="MaintNotifDetectionCatalog" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifDetectionCode" class="control-label"></label>
+                <input asp-for="MaintNotifDetectionCode" class="form-control" />
+                <span asp-validation-for="MaintNotifDetectionCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifDetectionCodeText" class="control-label"></label>
+                <input asp-for="MaintNotifDetectionCodeText" class="form-control" />
+                <span asp-validation-for="MaintNotifDetectionCodeText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifDetectionCodeGroup" class="control-label"></label>
+                <input asp-for="MaintNotifDetectionCodeGroup" class="form-control" />
+                <span asp-validation-for="MaintNotifDetectionCodeGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifDetectionCodeGrpTxt" class="control-label"></label>
+                <input asp-for="MaintNotifDetectionCodeGrpTxt" class="form-control" />
+                <span asp-validation-for="MaintNotifDetectionCodeGrpTxt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifProcessPhaseCode" class="control-label"></label>
+                <input asp-for="MaintNotifProcessPhaseCode" class="form-control" />
+                <span asp-validation-for="MaintNotifProcessPhaseCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaintNotifProcessSubPhaseCode" class="control-label"></label>
+                <input asp-for="MaintNotifProcessSubPhaseCode" class="form-control" />
+                <span asp-validation-for="MaintNotifProcessSubPhaseCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EAMProcessPhaseCodeDesc" class="control-label"></label>
+                <input asp-for="EAMProcessPhaseCodeDesc" class="form-control" />
+                <span asp-validation-for="EAMProcessPhaseCodeDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EAMProcessSubPhaseCodeDesc" class="control-label"></label>
+                <input asp-for="EAMProcessSubPhaseCodeDesc" class="form-control" />
+                <span asp-validation-for="EAMProcessSubPhaseCodeDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

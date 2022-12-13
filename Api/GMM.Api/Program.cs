@@ -107,7 +107,7 @@ app.UseRequestLocalization(new RequestLocalizationOptions
 });
 CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("es-PE");
 
-app.UseReecException<DbContextSqlServer>();
+//app.UseReecException<DbContextSqlServer>();
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
