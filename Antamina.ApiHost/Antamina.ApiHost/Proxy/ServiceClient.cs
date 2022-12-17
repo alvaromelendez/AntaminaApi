@@ -22,6 +22,38 @@ namespace Antamina.ApiHost.Proxy
             _credential = credential.Value;
             _urlApis = urlApis.Value;
         }
+
+        public async Task<Root> GetActivity()
+        {
+            Root response = null;
+            try
+            {
+                var authenticationString = $"{_credential.UserName}:{_credential.UserPassword}";
+                var base64String = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(authenticationString));
+
+                var requestMessage = new HttpRequestMessage(HttpMethod.Get, _urlApis.GetActivity);
+                requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Basic", base64String);
+
+                using (var httpClient = new HttpClient())
+                {
+                    httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    JsonSerializerOptions options = new JsonSerializerOptions();
+                    options.Converters.Add(new Extension.DateTimeConverter());
+
+                    var httpResponse = await httpClient.SendAsync(requestMessage);
+                    httpResponse.EnsureSuccessStatusCode();
+                    string content = await httpResponse.Content.ReadAsStringAsync();
+                    var response2 = Extension.DeserializeResponseXML<D>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return response;
+        }
         public async Task<GetNotificationAllResponse> GetNotificationAll()
         {
             GetNotificationAllResponse response = null;
@@ -35,7 +67,7 @@ namespace Antamina.ApiHost.Proxy
 
                 using (var httpClient = new HttpClient())
                 {
-                    httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    //httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                     JsonSerializerOptions options = new JsonSerializerOptions();
                     options.Converters.Add(new Extension.DateTimeConverter());

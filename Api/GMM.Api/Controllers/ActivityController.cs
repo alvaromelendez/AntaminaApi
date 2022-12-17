@@ -34,7 +34,7 @@ namespace GMM.Api.Controllers
         [HttpPost("Create")]
         public async Task<IActionResult> Create(CreateActivityRequest model)
         {
-            var result = await _mediator.Send(new CommandCreate(model));
+            var result = await _mediator.Send(new CommandCreate(model, this.GetCode(), this.GetHeader()));
             return Ok(result);
         }
 

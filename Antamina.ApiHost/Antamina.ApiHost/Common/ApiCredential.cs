@@ -11,5 +11,6 @@
         public string GetNotificationAll { get; set; }
         public string GetNotificationByID { get; set; }
         public string CreateNotification { get; set; }
+        public string GetActivity { get; set; }
     }
 }

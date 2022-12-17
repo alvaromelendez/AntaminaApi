@@ -1,35 +1,36 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace GMM.Application.Models
+namespace Antamina.ApiHost.Entities.DTO
 {
-    public class ActivityDetail
+    // Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
+    public class D
     {
         [JsonPropertyName("results")]
-        public List<ActivityResult> Results { get; set; }
+        public List<Result2> results { get; set; }
     }
 
-    public class ActivityDeferred
+    public class Deferred2
     {
         [JsonPropertyName("uri")]
-        public string Uri { get; set; }
+        public string uri { get; set; }
     }
 
-    public class ActivityMetadata
+    public class Metadata2
     {
         [JsonPropertyName("id")]
-        public string Id { get; set; }
+        public string id { get; set; }
 
         [JsonPropertyName("uri")]
-        public string Uri { get; set; }
+        public string uri { get; set; }
 
         [JsonPropertyName("type")]
-        public string Type { get; set; }
+        public string type { get; set; }
     }
 
-    public class ActivityResult
+    public class Result2
     {
         [JsonPropertyName("__metadata")]
-        public ActivityMetadata Metadata { get; set; }
+        public Metadata2 __metadata { get; set; }
 
         [JsonPropertyName("MaintNotificationActivity")]
         public string MaintNotificationActivity { get; set; }
@@ -74,33 +75,29 @@ namespace GMM.Application.Models
         public bool IsDeleted { get; set; }
 
         [JsonPropertyName("to_Item")]
-        public ActivityToItem ToItem { get; set; }
+        public ToItem2 to_Item { get; set; }
 
         [JsonPropertyName("to_Notif")]
-        public ActivityToNotif ToNotif { get; set; }
+        public ToNotif to_Notif { get; set; }
     }
 
-    public class ModelActivity
+    public class Root
     {
         [JsonPropertyName("d")]
-        public ActivityDetail D { get; set; }
+        public D d { get; set; }
     }
 
-    public class ActivityToItem
+    public class ToItem2
     {
         [JsonPropertyName("__deferred")]
-        public ActivityDeferred Deferred { get; set; }
+        public Deferred2 __deferred { get; set; }
     }
 
-    public class ActivityToNotif
+    public class ToNotif
     {
         [JsonPropertyName("__deferred")]
-        public ActivityDeferred Deferred { get; set; }
+        public Deferred2 __deferred { get; set; }
     }
 
-    public class ModelActivityCreate
-    {
-        [JsonPropertyName("d")]
-        public ActivityResult D { get; set; }
-    }
+
 }

@@ -20,6 +20,8 @@ namespace GMM.ExternalServices.ServiceProgrammed
 
         public string Security_GetProfileSiapp { get; set; }
         public string Security_GetProfileByCode { get; set; }
-      
+
+        public string UserName { get; set; }
+        public string UserPassword { get; set; }
     }
 }

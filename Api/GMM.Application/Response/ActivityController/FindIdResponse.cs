@@ -1,4 +1,5 @@
 ﻿using GMM.Application.Models;
+using System.Text.Json.Serialization;
 
 namespace GMM.Application.Response.ActivityController
 {

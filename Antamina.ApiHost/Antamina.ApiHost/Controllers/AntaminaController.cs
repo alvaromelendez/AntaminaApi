@@ -24,7 +24,7 @@ namespace Antamina.ApiHost.Controllers
         [Route("GetNoticationAll")]
         public async Task<ActionResult> GetNoticationAll()
         {
-            var response = await _serviceClient.GetNotificationAll();
+            var response = await _serviceClient.GetActivity();
             return Ok(response);
         }
 
