@@ -343,7 +343,7 @@ namespace GMM.Application.Models
         public string EAMProcessSubPhaseCodeDesc { get; set; }
 
         [JsonPropertyName("to_Item")]
-        public ToItem ToItem { get; set; }
+        public NotificationToItem ToItem { get; set; }
 
         [JsonPropertyName("to_Partner")]
         public NotificationToPartner ToPartner { get; set; }
@@ -355,7 +355,7 @@ namespace GMM.Application.Models
         public NotificationDetail D { get; set; }
     }
 
-    public class ToItem
+    public class NotificationToItem
     {
         [JsonPropertyName("__deferred")]
         public NotificationDeferred Deferred { get; set; }
@@ -366,14 +366,6 @@ namespace GMM.Application.Models
         [JsonPropertyName("__deferred")]
         public NotificationDeferred Deferred { get; set; }
     }
-
-    /////
-    ///
-
-
-
-
-    // Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
     public class ModelNotificationDetail
     {
         [JsonPropertyName("d")]
