@@ -18,16 +18,16 @@ namespace GMM.Api.Controllers
         }
 
         [HttpGet("FindAll")]
-        public async Task<IActionResult> FindAll()
+        public async Task<IActionResult> FindAll([FromQuery] FindAllRequest request)
         {
-            var result = await _mediator.Send(new QueryFindAll());
+            var result = await _mediator.Send(new QueryFindAll(request));
             return Ok(result);
         }
 
-        [HttpGet("FindId/{idNotification}")]
-        public async Task<IActionResult> FindId(Guid idNotification)
+        [HttpGet("FindId")]
+        public async Task<IActionResult> FindId([FromQuery] FindIdRequest request)
         {
-            var result = await _mediator.Send(new QueryFindId(idNotification));
+            var result = await _mediator.Send(new QueryFindId(request));
             return Ok(result);
         }
 
