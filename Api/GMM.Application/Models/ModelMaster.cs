@@ -7,54 +7,54 @@ using System.Threading.Tasks;
 
 namespace GMM.Application.Models
 {
-    public class ModelNotificeClass
+    public class ModelNotificeClassMaster
     {
-        [JsonPropertyName("KEY")]
-        public string KEY { get; set; }
+        [JsonPropertyName("Key")]
+        public string Key { get; set; }
 
-        [JsonPropertyName("DESCRIPTION")]
-        public string DESCRIPTION { get; set; }
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
     }
-    public class ModelPlanificationGroup
+    public class ModelPlanificationGroupMaster
     {
-        [JsonPropertyName("CODIGO")]
-        public string CODIGO { get; set; }
+        [JsonPropertyName("Code")]
+        public string Code { get; set; }
 
-        [JsonPropertyName("DESCRIPCION")]
-        public string DESCRIPCION { get; set; }
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
 
-        [JsonPropertyName("CENTRO")]
-        public string CENTRO { get; set; }
+        [JsonPropertyName("Center")]
+        public string Center { get; set; }
     }
-    public class ModelJobPosition
+    public class ModelJobPositionMaster
     {
-        [JsonPropertyName("CODIGO")]
-        public string CODIGO { get; set; }
+        [JsonPropertyName("Code")]
+        public string Code { get; set; }
 
-        [JsonPropertyName("DESCRIPCION")]
-        public string DESCRIPCION { get; set; }
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
 
-        [JsonPropertyName("RESPONSABLE")]
-        public string RESPONSABLE { get; set; }
+        [JsonPropertyName("Manager")]
+        public string Manager { get; set; }
 
-        [JsonPropertyName("CENTRO")]
-        public int CENTRO { get; set; }
+        [JsonPropertyName("Center")]
+        public int Center { get; set; }
 
-        [JsonPropertyName("GRUPOPLANIFICACION")]
-        public string GRUPOPLANIFICACION { get; set; }
+        [JsonPropertyName("PlanificationGroup")]
+        public string PlanificationGroup { get; set; }
     }
-    public class ModelPriority
+    public class ModelPriorityMaster
     {
-        [JsonPropertyName("KEY")]
-        public string KEY { get; set; }
+        [JsonPropertyName("Key")]
+        public string Key { get; set; }
 
-        [JsonPropertyName("DESCRIPTION")]
-        public string DESCRIPTION { get; set; }
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
     }
-    public class ModelFaultt
+    public class ModelFaultMaster
     {
-        [JsonPropertyName("Parte Objeto")]
-        public string ParteObjeto { get; set; }
+        [JsonPropertyName("ObjectPart")]
+        public string ObjectPart { get; set; }
 
         [JsonPropertyName("key")]
         public int key { get; set; }
@@ -62,10 +62,21 @@ namespace GMM.Application.Models
         [JsonPropertyName("Description")]
         public string Description { get; set; }
     }
-    public class ModelCausaa
+    public class ModelSymptomFaultMaster
     {
-        [JsonPropertyName("Causa")]
-        public string Causa { get; set; }
+        [JsonPropertyName("SymptomFault")]
+        public string SymptomFault { get; set; }
+
+        [JsonPropertyName("Key")]
+        public string Key { get; set; }
+
+        [JsonPropertyName("Description")]
+        public string Description { get; set; }
+    }
+    public class ModelCauseMaster
+    {
+        [JsonPropertyName("Cause")]
+        public string Cause { get; set; }
 
         [JsonPropertyName("Key")]
         public int Key { get; set; }
@@ -74,17 +85,15 @@ namespace GMM.Application.Models
         public string Description { get; set; }
     }
 
-    public class ModelActivityy
+    public class ModelActivityMaster
     {
-        [JsonPropertyName("Actividad")]
-        public string Actividad { get; set; }
+        [JsonPropertyName("Activity")]
+        public string Activity { get; set; }
 
         [JsonPropertyName("Key")]
         public int Key { get; set; }
 
         [JsonPropertyName("Description")]
         public string Description { get; set; }
-
     }
-
 }
