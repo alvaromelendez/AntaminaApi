@@ -3,6 +3,7 @@ using GMM.Application.Handlers.Queries.FaultController;
 using GMM.Application.Request.FaultController;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace GMM.Api.Controllers
 {
@@ -18,16 +19,16 @@ namespace GMM.Api.Controllers
         }
 
         [HttpGet("FindAll")]
-        public async Task<IActionResult> FindAll()
+        public async Task<IActionResult> FindAll([FromQuery] FindAllRequest request)
         {
-            var result = await _mediator.Send(new QueryFindAll());
+            var result = await _mediator.Send(new QueryFindAll(request));
             return Ok(result);
         }
 
-        [HttpGet("FindId/{idFault}")]
-        public async Task<IActionResult> FindId(Guid idFault)
+        [HttpGet("FindId")]
+        public async Task<IActionResult> FindId([FromQuery] FindIdRequest request)
         {
-            var result = await _mediator.Send(new QueryFindId(idFault));
+            var result = await _mediator.Send(new QueryFindId(request));
             return Ok(result);
         }
 
@@ -38,18 +39,18 @@ namespace GMM.Api.Controllers
             return Ok(result);
         }
 
-        [HttpPut("Update")]
-        public async Task<IActionResult> Update(UpdateFaultRequest model)
-        {
-            var result = await _mediator.Send(new CommandUpdate(model));
-            return Ok(result);
-        }
+        //[HttpPut("Update")]
+        //public async Task<IActionResult> Update(UpdateFaultRequest model)
+        //{
+        //    var result = await _mediator.Send(new CommandUpdate(model));
+        //    return Ok(result);
+        //}
 
-        [HttpDelete("Delete/{idFault}")]
-        public async Task<IActionResult> Delete(Guid idFault)
-        {
-            var result = await _mediator.Send(new CommandDelete(idFault));
-            return Ok(result);
-        }
+        //[HttpDelete("Delete/{idFault}")]
+        //public async Task<IActionResult> Delete(Guid idFault)
+        //{
+        //    var result = await _mediator.Send(new CommandDelete(idFault));
+        //    return Ok(result);
+        //}
     }
 }

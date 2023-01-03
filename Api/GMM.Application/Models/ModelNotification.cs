@@ -1,5 +1,4 @@
 ﻿using GMM.Domain.Entities;
-using MediatR;
 using System.Text.Json.Serialization;
 
 namespace GMM.Application.Models
@@ -343,7 +342,7 @@ namespace GMM.Application.Models
         public string EAMProcessSubPhaseCodeDesc { get; set; }
 
         [JsonPropertyName("to_Item")]
-        public NotificationToItem ToItem { get; set; }
+        public ToItem ToItem { get; set; }
 
         [JsonPropertyName("to_Partner")]
         public NotificationToPartner ToPartner { get; set; }
@@ -355,7 +354,7 @@ namespace GMM.Application.Models
         public NotificationDetail D { get; set; }
     }
 
-    public class NotificationToItem
+    public class ToItem
     {
         [JsonPropertyName("__deferred")]
         public NotificationDeferred Deferred { get; set; }
@@ -366,6 +365,7 @@ namespace GMM.Application.Models
         [JsonPropertyName("__deferred")]
         public NotificationDeferred Deferred { get; set; }
     }
+
     public class ModelNotificationDetail
     {
         [JsonPropertyName("d")]

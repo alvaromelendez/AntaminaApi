@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using GMM.Application.Interfaces.Repositories;
 using GMM.Application.Models;
+using GMM.Application.Request.FaultController;
 using GMM.ExternalServices.ServiceProgrammed.Base;
 using MediatR;
 
@@ -8,6 +9,11 @@ namespace GMM.Application.Handlers.Queries.FaultController
 {
     public class QueryFindAll : IRequest<ModelFault>
     {
+        public FindAllRequest Request { get; }
+        public QueryFindAll(FindAllRequest request)
+        {
+            Request = request;
+        }    
         public class QueryFindAllHandler : IRequestHandler<QueryFindAll, ModelFault>
         {
             private readonly IUnitOfWork _unitOfWork;
@@ -21,7 +27,7 @@ namespace GMM.Application.Handlers.Queries.FaultController
             }
             public async Task<ModelFault> Handle(QueryFindAll request, CancellationToken cancellationToken)
             {
-                var response = await _apiServiceProgrammed.GetAsync<ModelFault>("sap/opu/odata/sap/API_MAINTNOTIFICATION/MaintenanceNotificationItem(MaintenanceNotification='10000383',MaintenanceNotificationItem='1')/?sap-client=110");
+                var response = await _apiServiceProgrammed.GetAsync<ModelFault>($"/sap/opu/odata/sap/API_MAINTNOTIFICATION/MaintenanceNotification('{request.Request.MaintenanceNotification}')/to_Item/?sap-client=110");
                 var result = _mapper.Map<ModelFault>(response.Result);
                 return result;
             }
