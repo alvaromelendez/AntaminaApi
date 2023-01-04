@@ -2,632 +2,632 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace GMM.Application.Models
 {
     public class OperationSingleDetail
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public OperationSingleMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceOrder")]
+        [JsonProperty("MaintenanceOrder")]
         public string MaintenanceOrder { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderOperation")]
+        [JsonProperty("MaintenanceOrderOperation")]
         public string MaintenanceOrderOperation { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderSubOperation")]
+        [JsonProperty("MaintenanceOrderSubOperation")]
         public string MaintenanceOrderSubOperation { get; set; }
 
-        [JsonPropertyName("OperationControlKey")]
+        [JsonProperty("OperationControlKey")]
         public string OperationControlKey { get; set; }
 
-        [JsonPropertyName("OperationWorkCenterInternalID")]
+        [JsonProperty("OperationWorkCenterInternalID")]
         public string OperationWorkCenterInternalID { get; set; }
 
-        [JsonPropertyName("WorkCenter")]
+        [JsonProperty("WorkCenter")]
         public string WorkCenter { get; set; }
 
-        [JsonPropertyName("Plant")]
+        [JsonProperty("Plant")]
         public string Plant { get; set; }
 
-        [JsonPropertyName("OperationStandardTextCode")]
+        [JsonProperty("OperationStandardTextCode")]
         public string OperationStandardTextCode { get; set; }
 
-        [JsonPropertyName("OperationDescription")]
+        [JsonProperty("OperationDescription")]
         public string OperationDescription { get; set; }
 
-        [JsonPropertyName("MaintOrderRoutingNumber")]
+        [JsonProperty("MaintOrderRoutingNumber")]
         public string MaintOrderRoutingNumber { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderRoutingNode")]
+        [JsonProperty("MaintenanceOrderRoutingNode")]
         public string MaintenanceOrderRoutingNode { get; set; }
 
-        [JsonPropertyName("SuperiorOperationInternalID")]
+        [JsonProperty("SuperiorOperationInternalID")]
         public string SuperiorOperationInternalID { get; set; }
 
-        [JsonPropertyName("OperationWorkCenterTypeCode")]
+        [JsonProperty("OperationWorkCenterTypeCode")]
         public string OperationWorkCenterTypeCode { get; set; }
 
-        [JsonPropertyName("Language")]
+        [JsonProperty("Language")]
         public string Language { get; set; }
 
-        [JsonPropertyName("NumberOfTimeTickets")]
+        [JsonProperty("NumberOfTimeTickets")]
         public string NumberOfTimeTickets { get; set; }
 
-        [JsonPropertyName("OperationPurgInfoRecdSearchTxt")]
+        [JsonProperty("OperationPurgInfoRecdSearchTxt")]
         public string OperationPurgInfoRecdSearchTxt { get; set; }
 
-        [JsonPropertyName("OperationSupplier")]
+        [JsonProperty("OperationSupplier")]
         public string OperationSupplier { get; set; }
 
-        [JsonPropertyName("OpExternalProcessingPrice")]
+        [JsonProperty("OpExternalProcessingPrice")]
         public string OpExternalProcessingPrice { get; set; }
 
-        [JsonPropertyName("OpExternalProcessingCurrency")]
+        [JsonProperty("OpExternalProcessingCurrency")]
         public string OpExternalProcessingCurrency { get; set; }
 
-        [JsonPropertyName("CostElement")]
+        [JsonProperty("CostElement")]
         public string CostElement { get; set; }
 
-        [JsonPropertyName("OperationPurchasingInfoRecord")]
+        [JsonProperty("OperationPurchasingInfoRecord")]
         public string OperationPurchasingInfoRecord { get; set; }
 
-        [JsonPropertyName("PurchasingOrganization")]
+        [JsonProperty("PurchasingOrganization")]
         public string PurchasingOrganization { get; set; }
 
-        [JsonPropertyName("PurchasingGroup")]
+        [JsonProperty("PurchasingGroup")]
         public string PurchasingGroup { get; set; }
 
-        [JsonPropertyName("MaterialGroup")]
+        [JsonProperty("MaterialGroup")]
         public string MaterialGroup { get; set; }
 
-        [JsonPropertyName("OpPurchaseOutlineAgreement")]
+        [JsonProperty("OpPurchaseOutlineAgreement")]
         public string OpPurchaseOutlineAgreement { get; set; }
 
-        [JsonPropertyName("OpPurchaseOutlineAgreementItem")]
+        [JsonProperty("OpPurchaseOutlineAgreementItem")]
         public string OpPurchaseOutlineAgreementItem { get; set; }
 
-        [JsonPropertyName("OperationRequisitionerName")]
+        [JsonProperty("OperationRequisitionerName")]
         public string OperationRequisitionerName { get; set; }
 
-        [JsonPropertyName("OperationTrackingNumber")]
+        [JsonProperty("OperationTrackingNumber")]
         public string OperationTrackingNumber { get; set; }
 
-        [JsonPropertyName("NumberOfCapacities")]
+        [JsonProperty("NumberOfCapacities")]
         public int NumberOfCapacities { get; set; }
 
-        [JsonPropertyName("OperationWorkPercent")]
+        [JsonProperty("OperationWorkPercent")]
         public int OperationWorkPercent { get; set; }
 
-        [JsonPropertyName("OperationCalculationControl")]
+        [JsonProperty("OperationCalculationControl")]
         public string OperationCalculationControl { get; set; }
 
-        [JsonPropertyName("ActivityType")]
+        [JsonProperty("ActivityType")]
         public string ActivityType { get; set; }
 
-        [JsonPropertyName("OperationSystemCondition")]
+        [JsonProperty("OperationSystemCondition")]
         public string OperationSystemCondition { get; set; }
 
-        [JsonPropertyName("OperationGoodsRecipientName")]
+        [JsonProperty("OperationGoodsRecipientName")]
         public string OperationGoodsRecipientName { get; set; }
 
-        [JsonPropertyName("OperationUnloadingPointName")]
+        [JsonProperty("OperationUnloadingPointName")]
         public string OperationUnloadingPointName { get; set; }
 
-        [JsonPropertyName("OperationPersonResponsible")]
+        [JsonProperty("OperationPersonResponsible")]
         public string OperationPersonResponsible { get; set; }
 
-        [JsonPropertyName("DeliveryTimeInDays")]
+        [JsonProperty("DeliveryTimeInDays")]
         public string DeliveryTimeInDays { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationDuration")]
+        [JsonProperty("MaintOrderOperationDuration")]
         public string MaintOrderOperationDuration { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationDurationUnit")]
+        [JsonProperty("MaintOrdOperationDurationUnit")]
         public string MaintOrdOperationDurationUnit { get; set; }
 
-        [JsonPropertyName("OpBscStartDateConstraintType")]
+        [JsonProperty("OpBscStartDateConstraintType")]
         public string OpBscStartDateConstraintType { get; set; }
 
-        [JsonPropertyName("OpBscEndDateConstraintType")]
+        [JsonProperty("OpBscEndDateConstraintType")]
         public string OpBscEndDateConstraintType { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationWorkDuration")]
+        [JsonProperty("MaintOrdOperationWorkDuration")]
         public string MaintOrdOperationWorkDuration { get; set; }
 
-        [JsonPropertyName("MaintOrdOpWorkDurationUnit")]
+        [JsonProperty("MaintOrdOpWorkDurationUnit")]
         public string MaintOrdOpWorkDurationUnit { get; set; }
 
-        [JsonPropertyName("ConstraintDateForBscStartDate")]
+        [JsonProperty("ConstraintDateForBscStartDate")]
         public object ConstraintDateForBscStartDate { get; set; }
 
-        [JsonPropertyName("ConstraintTimeForBscStartTime")]
+        [JsonProperty("ConstraintTimeForBscStartTime")]
         public string ConstraintTimeForBscStartTime { get; set; }
 
-        [JsonPropertyName("ConstraintDateForBscFinishDate")]
+        [JsonProperty("ConstraintDateForBscFinishDate")]
         public object ConstraintDateForBscFinishDate { get; set; }
 
-        [JsonPropertyName("ConstraintTimeForBscFinishTime")]
+        [JsonProperty("ConstraintTimeForBscFinishTime")]
         public string ConstraintTimeForBscFinishTime { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationExecutionRate")]
+        [JsonProperty("MaintOrdOperationExecutionRate")]
         public string MaintOrdOperationExecutionRate { get; set; }
 
-        [JsonPropertyName("Equipment")]
+        [JsonProperty("Equipment")]
         public string Equipment { get; set; }
 
-        [JsonPropertyName("FunctionalLocation")]
+        [JsonProperty("FunctionalLocation")]
         public string FunctionalLocation { get; set; }
 
-        [JsonPropertyName("MaintenanceActivityType")]
+        [JsonProperty("MaintenanceActivityType")]
         public string MaintenanceActivityType { get; set; }
 
-        [JsonPropertyName("BusinessArea")]
+        [JsonProperty("BusinessArea")]
         public string BusinessArea { get; set; }
 
-        [JsonPropertyName("ProfitCenter")]
+        [JsonProperty("ProfitCenter")]
         public string ProfitCenter { get; set; }
 
-        [JsonPropertyName("CostingSheet")]
+        [JsonProperty("CostingSheet")]
         public string CostingSheet { get; set; }
 
-        [JsonPropertyName("TaxJurisdiction")]
+        [JsonProperty("TaxJurisdiction")]
         public string TaxJurisdiction { get; set; }
 
-        [JsonPropertyName("FunctionalArea")]
+        [JsonProperty("FunctionalArea")]
         public string FunctionalArea { get; set; }
 
-        [JsonPropertyName("MaintControllingObjectClass")]
+        [JsonProperty("MaintControllingObjectClass")]
         public string MaintControllingObjectClass { get; set; }
 
-        [JsonPropertyName("WrkCtrIntCapRqmtsDistr")]
+        [JsonProperty("WrkCtrIntCapRqmtsDistr")]
         public string WrkCtrIntCapRqmtsDistr { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationOverheadCode")]
+        [JsonProperty("MaintOrdOperationOverheadCode")]
         public string MaintOrdOperationOverheadCode { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationQuantity")]
+        [JsonProperty("MaintOrderOperationQuantity")]
         public string MaintOrderOperationQuantity { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationQuantityUnit")]
+        [JsonProperty("MaintOrdOperationQuantityUnit")]
         public string MaintOrdOperationQuantityUnit { get; set; }
 
-        [JsonPropertyName("Assembly")]
+        [JsonProperty("Assembly")]
         public string Assembly { get; set; }
 
-        [JsonPropertyName("MaintOperationExecStageCode")]
+        [JsonProperty("MaintOperationExecStageCode")]
         public string MaintOperationExecStageCode { get; set; }
 
-        [JsonPropertyName("MaintOrdOpAssgdWBSElmntInt")]
+        [JsonProperty("MaintOrdOpAssgdWBSElmntInt")]
         public string MaintOrdOpAssgdWBSElmntInt { get; set; }
 
-        [JsonPropertyName("WBSElement")]
+        [JsonProperty("WBSElement")]
         public string WBSElement { get; set; }
 
-        [JsonPropertyName("IsMarkedForDeletion")]
+        [JsonProperty("IsMarkedForDeletion")]
         public bool IsMarkedForDeletion { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationInternalID")]
+        [JsonProperty("MaintOrderOperationInternalID")]
         public string MaintOrderOperationInternalID { get; set; }
 
-        [JsonPropertyName("MaintenanceObjectListItem")]
+        [JsonProperty("MaintenanceObjectListItem")]
         public int MaintenanceObjectListItem { get; set; }
 
-        [JsonPropertyName("PurchaseRequisition")]
+        [JsonProperty("PurchaseRequisition")]
         public string PurchaseRequisition { get; set; }
 
-        [JsonPropertyName("PurchaseRequisitionItem")]
+        [JsonProperty("PurchaseRequisitionItem")]
         public string PurchaseRequisitionItem { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecStrtDte")]
+        [JsonProperty("OpErlstSchedldExecStrtDte")]
         public DateTime OpErlstSchedldExecStrtDte { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecStrtTme")]
+        [JsonProperty("OpErlstSchedldExecStrtTme")]
         public string OpErlstSchedldExecStrtTme { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecEndDte")]
+        [JsonProperty("OpErlstSchedldExecEndDte")]
         public DateTime OpErlstSchedldExecEndDte { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecEndTme")]
+        [JsonProperty("OpErlstSchedldExecEndTme")]
         public string OpErlstSchedldExecEndTme { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecStrtDte")]
+        [JsonProperty("OpLtstSchedldExecStrtDte")]
         public DateTime OpLtstSchedldExecStrtDte { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecStrtTme")]
+        [JsonProperty("OpLtstSchedldExecStrtTme")]
         public string OpLtstSchedldExecStrtTme { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecEndDte")]
+        [JsonProperty("OpLtstSchedldExecEndDte")]
         public DateTime OpLtstSchedldExecEndDte { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecEndTme")]
+        [JsonProperty("OpLtstSchedldExecEndTme")]
         public string OpLtstSchedldExecEndTme { get; set; }
 
-        [JsonPropertyName("OpActualExecutionStartDate")]
+        [JsonProperty("OpActualExecutionStartDate")]
         public object OpActualExecutionStartDate { get; set; }
 
-        [JsonPropertyName("OpActualExecutionStartTime")]
+        [JsonProperty("OpActualExecutionStartTime")]
         public string OpActualExecutionStartTime { get; set; }
 
-        [JsonPropertyName("OpActualExecutionEndDate")]
+        [JsonProperty("OpActualExecutionEndDate")]
         public object OpActualExecutionEndDate { get; set; }
 
-        [JsonPropertyName("OpActualExecutionEndTime")]
+        [JsonProperty("OpActualExecutionEndTime")]
         public string OpActualExecutionEndTime { get; set; }
 
-        [JsonPropertyName("ForecastWorkQuantity")]
+        [JsonProperty("ForecastWorkQuantity")]
         public string ForecastWorkQuantity { get; set; }
 
-        [JsonPropertyName("ActualWorkQuantity")]
+        [JsonProperty("ActualWorkQuantity")]
         public string ActualWorkQuantity { get; set; }
 
-        [JsonPropertyName("MaintOrdOpProcessPhaseCode")]
+        [JsonProperty("MaintOrdOpProcessPhaseCode")]
         public string MaintOrdOpProcessPhaseCode { get; set; }
 
-        [JsonPropertyName("MaintOrdOpProcessSubPhaseCode")]
+        [JsonProperty("MaintOrdOpProcessSubPhaseCode")]
         public string MaintOrdOpProcessSubPhaseCode { get; set; }
 
-        [JsonPropertyName("to_MaintenanceOrder")]
+        [JsonProperty("to_MaintenanceOrder")]
         public OperationSingleToMaintenanceOrder ToMaintenanceOrder { get; set; }
 
-        [JsonPropertyName("to_MaintOrderOpComponent")]
+        [JsonProperty("to_MaintOrderOpComponent")]
         public OperationSingleToMaintOrderOpComponent ToMaintOrderOpComponent { get; set; }
 
-        [JsonPropertyName("to_MaintOrderOpRelationship")]
+        [JsonProperty("to_MaintOrderOpRelationship")]
         public OperationSingleToMaintOrderOpRelationship ToMaintOrderOpRelationship { get; set; }
     }
     public class OperationSingleDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
     public class OperationSingleMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
     public class ModelOperationFind
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public OperationSingleDetail D { get; set; }
     }
     public class OperationSingleToMaintenanceOrder
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationSingleDeferred Deferred { get; set; }
     }
     public class OperationSingleToMaintOrderOpComponent
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationSingleDeferred Deferred { get; set; }
     }
     public class OperationSingleToMaintOrderOpRelationship
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationSingleDeferred Deferred { get; set; }
     }
 
 
     public class OperationAllDetail
     {
-        [JsonPropertyName("results")]
+        [JsonProperty("results")]
         public List<OperationAllResult> Results { get; set; }
     }
     public class OperationAllDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
     public class OperationAllMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
     public class OperationAllResult
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public OperationAllMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceOrder")]
+        [JsonProperty("MaintenanceOrder")]
         public string MaintenanceOrder { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderOperation")]
+        [JsonProperty("MaintenanceOrderOperation")]
         public string MaintenanceOrderOperation { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderSubOperation")]
+        [JsonProperty("MaintenanceOrderSubOperation")]
         public string MaintenanceOrderSubOperation { get; set; }
 
-        [JsonPropertyName("OperationControlKey")]
+        [JsonProperty("OperationControlKey")]
         public string OperationControlKey { get; set; }
 
-        [JsonPropertyName("OperationWorkCenterInternalID")]
+        [JsonProperty("OperationWorkCenterInternalID")]
         public string OperationWorkCenterInternalID { get; set; }
 
-        [JsonPropertyName("WorkCenter")]
+        [JsonProperty("WorkCenter")]
         public string WorkCenter { get; set; }
 
-        [JsonPropertyName("Plant")]
+        [JsonProperty("Plant")]
         public string Plant { get; set; }
 
-        [JsonPropertyName("OperationStandardTextCode")]
+        [JsonProperty("OperationStandardTextCode")]
         public string OperationStandardTextCode { get; set; }
 
-        [JsonPropertyName("OperationDescription")]
+        [JsonProperty("OperationDescription")]
         public string OperationDescription { get; set; }
 
-        [JsonPropertyName("MaintOrderRoutingNumber")]
+        [JsonProperty("MaintOrderRoutingNumber")]
         public string MaintOrderRoutingNumber { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderRoutingNode")]
+        [JsonProperty("MaintenanceOrderRoutingNode")]
         public string MaintenanceOrderRoutingNode { get; set; }
 
-        [JsonPropertyName("SuperiorOperationInternalID")]
+        [JsonProperty("SuperiorOperationInternalID")]
         public string SuperiorOperationInternalID { get; set; }
 
-        [JsonPropertyName("OperationWorkCenterTypeCode")]
+        [JsonProperty("OperationWorkCenterTypeCode")]
         public string OperationWorkCenterTypeCode { get; set; }
 
-        [JsonPropertyName("Language")]
+        [JsonProperty("Language")]
         public string Language { get; set; }
 
-        [JsonPropertyName("NumberOfTimeTickets")]
+        [JsonProperty("NumberOfTimeTickets")]
         public string NumberOfTimeTickets { get; set; }
 
-        [JsonPropertyName("OperationPurgInfoRecdSearchTxt")]
+        [JsonProperty("OperationPurgInfoRecdSearchTxt")]
         public string OperationPurgInfoRecdSearchTxt { get; set; }
 
-        [JsonPropertyName("OperationSupplier")]
+        [JsonProperty("OperationSupplier")]
         public string OperationSupplier { get; set; }
 
-        [JsonPropertyName("OpExternalProcessingPrice")]
+        [JsonProperty("OpExternalProcessingPrice")]
         public string OpExternalProcessingPrice { get; set; }
 
-        [JsonPropertyName("OpExternalProcessingCurrency")]
+        [JsonProperty("OpExternalProcessingCurrency")]
         public string OpExternalProcessingCurrency { get; set; }
 
-        [JsonPropertyName("CostElement")]
+        [JsonProperty("CostElement")]
         public string CostElement { get; set; }
 
-        [JsonPropertyName("OperationPurchasingInfoRecord")]
+        [JsonProperty("OperationPurchasingInfoRecord")]
         public string OperationPurchasingInfoRecord { get; set; }
 
-        [JsonPropertyName("PurchasingOrganization")]
+        [JsonProperty("PurchasingOrganization")]
         public string PurchasingOrganization { get; set; }
 
-        [JsonPropertyName("PurchasingGroup")]
+        [JsonProperty("PurchasingGroup")]
         public string PurchasingGroup { get; set; }
 
-        [JsonPropertyName("MaterialGroup")]
+        [JsonProperty("MaterialGroup")]
         public string MaterialGroup { get; set; }
 
-        [JsonPropertyName("OpPurchaseOutlineAgreement")]
+        [JsonProperty("OpPurchaseOutlineAgreement")]
         public string OpPurchaseOutlineAgreement { get; set; }
 
-        [JsonPropertyName("OpPurchaseOutlineAgreementItem")]
+        [JsonProperty("OpPurchaseOutlineAgreementItem")]
         public string OpPurchaseOutlineAgreementItem { get; set; }
 
-        [JsonPropertyName("OperationRequisitionerName")]
+        [JsonProperty("OperationRequisitionerName")]
         public string OperationRequisitionerName { get; set; }
 
-        [JsonPropertyName("OperationTrackingNumber")]
+        [JsonProperty("OperationTrackingNumber")]
         public string OperationTrackingNumber { get; set; }
 
-        [JsonPropertyName("NumberOfCapacities")]
+        [JsonProperty("NumberOfCapacities")]
         public int NumberOfCapacities { get; set; }
 
-        [JsonPropertyName("OperationWorkPercent")]
+        [JsonProperty("OperationWorkPercent")]
         public int OperationWorkPercent { get; set; }
 
-        [JsonPropertyName("OperationCalculationControl")]
+        [JsonProperty("OperationCalculationControl")]
         public string OperationCalculationControl { get; set; }
 
-        [JsonPropertyName("ActivityType")]
+        [JsonProperty("ActivityType")]
         public string ActivityType { get; set; }
 
-        [JsonPropertyName("OperationSystemCondition")]
+        [JsonProperty("OperationSystemCondition")]
         public string OperationSystemCondition { get; set; }
 
-        [JsonPropertyName("OperationGoodsRecipientName")]
+        [JsonProperty("OperationGoodsRecipientName")]
         public string OperationGoodsRecipientName { get; set; }
 
-        [JsonPropertyName("OperationUnloadingPointName")]
+        [JsonProperty("OperationUnloadingPointName")]
         public string OperationUnloadingPointName { get; set; }
 
-        [JsonPropertyName("OperationPersonResponsible")]
+        [JsonProperty("OperationPersonResponsible")]
         public string OperationPersonResponsible { get; set; }
 
-        [JsonPropertyName("DeliveryTimeInDays")]
+        [JsonProperty("DeliveryTimeInDays")]
         public string DeliveryTimeInDays { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationDuration")]
+        [JsonProperty("MaintOrderOperationDuration")]
         public string MaintOrderOperationDuration { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationDurationUnit")]
+        [JsonProperty("MaintOrdOperationDurationUnit")]
         public string MaintOrdOperationDurationUnit { get; set; }
 
-        [JsonPropertyName("OpBscStartDateConstraintType")]
+        [JsonProperty("OpBscStartDateConstraintType")]
         public string OpBscStartDateConstraintType { get; set; }
 
-        [JsonPropertyName("OpBscEndDateConstraintType")]
+        [JsonProperty("OpBscEndDateConstraintType")]
         public string OpBscEndDateConstraintType { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationWorkDuration")]
+        [JsonProperty("MaintOrdOperationWorkDuration")]
         public string MaintOrdOperationWorkDuration { get; set; }
 
-        [JsonPropertyName("MaintOrdOpWorkDurationUnit")]
+        [JsonProperty("MaintOrdOpWorkDurationUnit")]
         public string MaintOrdOpWorkDurationUnit { get; set; }
 
-        [JsonPropertyName("ConstraintDateForBscStartDate")]
+        [JsonProperty("ConstraintDateForBscStartDate")]
         public DateTime? ConstraintDateForBscStartDate { get; set; }
 
-        [JsonPropertyName("ConstraintTimeForBscStartTime")]
+        [JsonProperty("ConstraintTimeForBscStartTime")]
         public string ConstraintTimeForBscStartTime { get; set; }
 
-        [JsonPropertyName("ConstraintDateForBscFinishDate")]
+        [JsonProperty("ConstraintDateForBscFinishDate")]
         public object ConstraintDateForBscFinishDate { get; set; }
 
-        [JsonPropertyName("ConstraintTimeForBscFinishTime")]
+        [JsonProperty("ConstraintTimeForBscFinishTime")]
         public string ConstraintTimeForBscFinishTime { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationExecutionRate")]
+        [JsonProperty("MaintOrdOperationExecutionRate")]
         public string MaintOrdOperationExecutionRate { get; set; }
 
-        [JsonPropertyName("Equipment")]
+        [JsonProperty("Equipment")]
         public string Equipment { get; set; }
 
-        [JsonPropertyName("FunctionalLocation")]
+        [JsonProperty("FunctionalLocation")]
         public string FunctionalLocation { get; set; }
 
-        [JsonPropertyName("MaintenanceActivityType")]
+        [JsonProperty("MaintenanceActivityType")]
         public string MaintenanceActivityType { get; set; }
 
-        [JsonPropertyName("BusinessArea")]
+        [JsonProperty("BusinessArea")]
         public string BusinessArea { get; set; }
 
-        [JsonPropertyName("ProfitCenter")]
+        [JsonProperty("ProfitCenter")]
         public string ProfitCenter { get; set; }
 
-        [JsonPropertyName("CostingSheet")]
+        [JsonProperty("CostingSheet")]
         public string CostingSheet { get; set; }
 
-        [JsonPropertyName("TaxJurisdiction")]
+        [JsonProperty("TaxJurisdiction")]
         public string TaxJurisdiction { get; set; }
 
-        [JsonPropertyName("FunctionalArea")]
+        [JsonProperty("FunctionalArea")]
         public string FunctionalArea { get; set; }
 
-        [JsonPropertyName("MaintControllingObjectClass")]
+        [JsonProperty("MaintControllingObjectClass")]
         public string MaintControllingObjectClass { get; set; }
 
-        [JsonPropertyName("WrkCtrIntCapRqmtsDistr")]
+        [JsonProperty("WrkCtrIntCapRqmtsDistr")]
         public string WrkCtrIntCapRqmtsDistr { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationOverheadCode")]
+        [JsonProperty("MaintOrdOperationOverheadCode")]
         public string MaintOrdOperationOverheadCode { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationQuantity")]
+        [JsonProperty("MaintOrderOperationQuantity")]
         public string MaintOrderOperationQuantity { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationQuantityUnit")]
+        [JsonProperty("MaintOrdOperationQuantityUnit")]
         public string MaintOrdOperationQuantityUnit { get; set; }
 
-        [JsonPropertyName("Assembly")]
+        [JsonProperty("Assembly")]
         public string Assembly { get; set; }
 
-        [JsonPropertyName("MaintOperationExecStageCode")]
+        [JsonProperty("MaintOperationExecStageCode")]
         public string MaintOperationExecStageCode { get; set; }
 
-        [JsonPropertyName("MaintOrdOpAssgdWBSElmntInt")]
+        [JsonProperty("MaintOrdOpAssgdWBSElmntInt")]
         public string MaintOrdOpAssgdWBSElmntInt { get; set; }
 
-        [JsonPropertyName("WBSElement")]
+        [JsonProperty("WBSElement")]
         public string WBSElement { get; set; }
 
-        [JsonPropertyName("IsMarkedForDeletion")]
+        [JsonProperty("IsMarkedForDeletion")]
         public bool IsMarkedForDeletion { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationInternalID")]
+        [JsonProperty("MaintOrderOperationInternalID")]
         public string MaintOrderOperationInternalID { get; set; }
 
-        [JsonPropertyName("MaintenanceObjectListItem")]
+        [JsonProperty("MaintenanceObjectListItem")]
         public int MaintenanceObjectListItem { get; set; }
 
-        [JsonPropertyName("PurchaseRequisition")]
+        [JsonProperty("PurchaseRequisition")]
         public string PurchaseRequisition { get; set; }
 
-        [JsonPropertyName("PurchaseRequisitionItem")]
+        [JsonProperty("PurchaseRequisitionItem")]
         public string PurchaseRequisitionItem { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecStrtDte")]
+        [JsonProperty("OpErlstSchedldExecStrtDte")]
         public DateTime OpErlstSchedldExecStrtDte { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecStrtTme")]
+        [JsonProperty("OpErlstSchedldExecStrtTme")]
         public string OpErlstSchedldExecStrtTme { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecEndDte")]
+        [JsonProperty("OpErlstSchedldExecEndDte")]
         public DateTime OpErlstSchedldExecEndDte { get; set; }
 
-        [JsonPropertyName("OpErlstSchedldExecEndTme")]
+        [JsonProperty("OpErlstSchedldExecEndTme")]
         public string OpErlstSchedldExecEndTme { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecStrtDte")]
+        [JsonProperty("OpLtstSchedldExecStrtDte")]
         public DateTime OpLtstSchedldExecStrtDte { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecStrtTme")]
+        [JsonProperty("OpLtstSchedldExecStrtTme")]
         public string OpLtstSchedldExecStrtTme { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecEndDte")]
+        [JsonProperty("OpLtstSchedldExecEndDte")]
         public DateTime OpLtstSchedldExecEndDte { get; set; }
 
-        [JsonPropertyName("OpLtstSchedldExecEndTme")]
+        [JsonProperty("OpLtstSchedldExecEndTme")]
         public string OpLtstSchedldExecEndTme { get; set; }
 
-        [JsonPropertyName("OpActualExecutionStartDate")]
+        [JsonProperty("OpActualExecutionStartDate")]
         public DateTime OpActualExecutionStartDate { get; set; }
 
-        [JsonPropertyName("OpActualExecutionStartTime")]
+        [JsonProperty("OpActualExecutionStartTime")]
         public string OpActualExecutionStartTime { get; set; }
 
-        [JsonPropertyName("OpActualExecutionEndDate")]
+        [JsonProperty("OpActualExecutionEndDate")]
         public DateTime OpActualExecutionEndDate { get; set; }
 
-        [JsonPropertyName("OpActualExecutionEndTime")]
+        [JsonProperty("OpActualExecutionEndTime")]
         public string OpActualExecutionEndTime { get; set; }
 
-        [JsonPropertyName("ForecastWorkQuantity")]
+        [JsonProperty("ForecastWorkQuantity")]
         public string ForecastWorkQuantity { get; set; }
 
-        [JsonPropertyName("ActualWorkQuantity")]
+        [JsonProperty("ActualWorkQuantity")]
         public string ActualWorkQuantity { get; set; }
 
-        [JsonPropertyName("MaintOrdOpProcessPhaseCode")]
+        [JsonProperty("MaintOrdOpProcessPhaseCode")]
         public string MaintOrdOpProcessPhaseCode { get; set; }
 
-        [JsonPropertyName("MaintOrdOpProcessSubPhaseCode")]
+        [JsonProperty("MaintOrdOpProcessSubPhaseCode")]
         public string MaintOrdOpProcessSubPhaseCode { get; set; }
 
-        [JsonPropertyName("to_MaintenanceOrder")]
+        [JsonProperty("to_MaintenanceOrder")]
         public OperationAllToMaintenanceOrder ToMaintenanceOrder { get; set; }
 
-        [JsonPropertyName("to_MaintOrderOpComponent")]
+        [JsonProperty("to_MaintOrderOpComponent")]
         public OperationAllToMaintOrderOpComponent ToMaintOrderOpComponent { get; set; }
 
-        [JsonPropertyName("to_MaintOrderOpRelationship")]
+        [JsonProperty("to_MaintOrderOpRelationship")]
         public OperationAllToMaintOrderOpRelationship ToMaintOrderOpRelationship { get; set; }
     }
     public class ModelOperationFindAll
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public OperationAllDetail D { get; set; }
     }
     public class OperationAllToMaintenanceOrder
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationAllDeferred Deferred { get; set; }
     }
     public class OperationAllToMaintOrderOpComponent
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationAllDeferred Deferred { get; set; }
     }
     public class OperationAllToMaintOrderOpRelationship
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationAllDeferred Deferred { get; set; }
     }
 
@@ -636,256 +636,256 @@ namespace GMM.Application.Models
 
     public class OperationFindIdDetail
     {
-        [JsonPropertyName("results")]
+        [JsonProperty("results")]
         public List<OperationFindIdResult> Results { get; set; }
     }
     public class OperationFindIdDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
     public class OperationFindIdMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
     public class OperationFindIdResult
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public OperationFindIdMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceOrder")]
+        [JsonProperty("MaintenanceOrder")]
         public string MaintenanceOrder { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderOperation")]
+        [JsonProperty("MaintenanceOrderOperation")]
         public string MaintenanceOrderOperation { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderSubOperation")]
+        [JsonProperty("MaintenanceOrderSubOperation")]
         public string MaintenanceOrderSubOperation { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderComponent")]
+        [JsonProperty("MaintenanceOrderComponent")]
         public string MaintenanceOrderComponent { get; set; }
 
-        [JsonPropertyName("Reservation")]
+        [JsonProperty("Reservation")]
         public string Reservation { get; set; }
 
-        [JsonPropertyName("ReservationItem")]
+        [JsonProperty("ReservationItem")]
         public string ReservationItem { get; set; }
 
-        [JsonPropertyName("ReservationType")]
+        [JsonProperty("ReservationType")]
         public string ReservationType { get; set; }
 
-        [JsonPropertyName("MaintOrderRoutingNumber")]
+        [JsonProperty("MaintOrderRoutingNumber")]
         public string MaintOrderRoutingNumber { get; set; }
 
-        [JsonPropertyName("MaintOrderOperationCounter")]
+        [JsonProperty("MaintOrderOperationCounter")]
         public string MaintOrderOperationCounter { get; set; }
 
-        [JsonPropertyName("Product")]
+        [JsonProperty("Product")]
         public string Product { get; set; }
 
-        [JsonPropertyName("MaintOrdOperationComponentText")]
+        [JsonProperty("MaintOrdOperationComponentText")]
         public string MaintOrdOperationComponentText { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompRequiredQuantity")]
+        [JsonProperty("MaintOrdOpCompRequiredQuantity")]
         public string MaintOrdOpCompRequiredQuantity { get; set; }
 
-        [JsonPropertyName("BaseUnit")]
+        [JsonProperty("BaseUnit")]
         public string BaseUnit { get; set; }
 
-        [JsonPropertyName("QuantityInUnitOfEntry")]
+        [JsonProperty("QuantityInUnitOfEntry")]
         public string QuantityInUnitOfEntry { get; set; }
 
-        [JsonPropertyName("UnitOfEntry")]
+        [JsonProperty("UnitOfEntry")]
         public string UnitOfEntry { get; set; }
 
-        [JsonPropertyName("RequirementDate")]
+        [JsonProperty("RequirementDate")]
         public DateTime RequirementDate { get; set; }
 
-        [JsonPropertyName("RequirementTime")]
+        [JsonProperty("RequirementTime")]
         public string RequirementTime { get; set; }
 
-        [JsonPropertyName("Supplier")]
+        [JsonProperty("Supplier")]
         public string Supplier { get; set; }
 
-        [JsonPropertyName("Plant")]
+        [JsonProperty("Plant")]
         public string Plant { get; set; }
 
-        [JsonPropertyName("StorageLocation")]
+        [JsonProperty("StorageLocation")]
         public string StorageLocation { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompItemCategory")]
+        [JsonProperty("MaintOrdOpCompItemCategory")]
         public string MaintOrdOpCompItemCategory { get; set; }
 
-        [JsonPropertyName("GoodsMovementType")]
+        [JsonProperty("GoodsMovementType")]
         public string GoodsMovementType { get; set; }
 
-        [JsonPropertyName("ReservationIsFinallyIssued")]
+        [JsonProperty("ReservationIsFinallyIssued")]
         public bool ReservationIsFinallyIssued { get; set; }
 
-        [JsonPropertyName("MaterialGroup")]
+        [JsonProperty("MaterialGroup")]
         public string MaterialGroup { get; set; }
 
-        [JsonPropertyName("ProductTypeCode")]
+        [JsonProperty("ProductTypeCode")]
         public string ProductTypeCode { get; set; }
 
-        [JsonPropertyName("ServicePerformer")]
+        [JsonProperty("ServicePerformer")]
         public string ServicePerformer { get; set; }
 
-        [JsonPropertyName("PerformancePeriodStartDate")]
+        [JsonProperty("PerformancePeriodStartDate")]
         public object PerformancePeriodStartDate { get; set; }
 
-        [JsonPropertyName("PerformancePeriodEndDate")]
+        [JsonProperty("PerformancePeriodEndDate")]
         public object PerformancePeriodEndDate { get; set; }
 
-        [JsonPropertyName("MaintOrderCompDebitCreditCode")]
+        [JsonProperty("MaintOrderCompDebitCreditCode")]
         public string MaintOrderCompDebitCreditCode { get; set; }
 
-        [JsonPropertyName("GoodsMovementIsAllowed")]
+        [JsonProperty("GoodsMovementIsAllowed")]
         public bool GoodsMovementIsAllowed { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderComponentBatch")]
+        [JsonProperty("MaintenanceOrderComponentBatch")]
         public string MaintenanceOrderComponentBatch { get; set; }
 
-        [JsonPropertyName("QuantityIsFixed")]
+        [JsonProperty("QuantityIsFixed")]
         public bool QuantityIsFixed { get; set; }
 
-        [JsonPropertyName("MaintOrdOpComponentGLAccount")]
+        [JsonProperty("MaintOrdOpComponentGLAccount")]
         public string MaintOrdOpComponentGLAccount { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompCostingRelevancy")]
+        [JsonProperty("MaintOrdOpCompCostingRelevancy")]
         public string MaintOrdOpCompCostingRelevancy { get; set; }
 
-        [JsonPropertyName("MaintCompAltvProdUsgeRateInPct")]
+        [JsonProperty("MaintCompAltvProdUsgeRateInPct")]
         public string MaintCompAltvProdUsgeRateInPct { get; set; }
 
-        [JsonPropertyName("MaintOrderOpComponentSortText")]
+        [JsonProperty("MaintOrderOpComponentSortText")]
         public string MaintOrderOpComponentSortText { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompIsBulkProduct")]
+        [JsonProperty("MaintOrdOpCompIsBulkProduct")]
         public bool MaintOrdOpCompIsBulkProduct { get; set; }
 
-        [JsonPropertyName("MaterialProvisionType")]
+        [JsonProperty("MaterialProvisionType")]
         public string MaterialProvisionType { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompAssgdWBSElmntInt")]
+        [JsonProperty("MaintOrdOpCompAssgdWBSElmntInt")]
         public string MaintOrdOpCompAssgdWBSElmntInt { get; set; }
 
-        [JsonPropertyName("MaintOrderOpComponentPrice")]
+        [JsonProperty("MaintOrderOpComponentPrice")]
         public string MaintOrderOpComponentPrice { get; set; }
 
-        [JsonPropertyName("MaintOrdOpComponentCurrency")]
+        [JsonProperty("MaintOrdOpComponentCurrency")]
         public string MaintOrdOpComponentCurrency { get; set; }
 
-        [JsonPropertyName("MatlCompIsMarkedForBackflush")]
+        [JsonProperty("MatlCompIsMarkedForBackflush")]
         public bool MatlCompIsMarkedForBackflush { get; set; }
 
-        [JsonPropertyName("PurchasingGroup")]
+        [JsonProperty("PurchasingGroup")]
         public string PurchasingGroup { get; set; }
 
-        [JsonPropertyName("DeliveryTimeInDays")]
+        [JsonProperty("DeliveryTimeInDays")]
         public string DeliveryTimeInDays { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompGdsRecipientName")]
+        [JsonProperty("MaintOrdOpCompGdsRecipientName")]
         public string MaintOrdOpCompGdsRecipientName { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompUnloadingPtTxt")]
+        [JsonProperty("MaintOrdOpCompUnloadingPtTxt")]
         public string MaintOrdOpCompUnloadingPtTxt { get; set; }
 
-        [JsonPropertyName("GoodsReceiptDurationInWorkDays")]
+        [JsonProperty("GoodsReceiptDurationInWorkDays")]
         public string GoodsReceiptDurationInWorkDays { get; set; }
 
-        [JsonPropertyName("PurchasingInfoRecord")]
+        [JsonProperty("PurchasingInfoRecord")]
         public string PurchasingInfoRecord { get; set; }
 
-        [JsonPropertyName("OperationLeadTimeOffset")]
+        [JsonProperty("OperationLeadTimeOffset")]
         public string OperationLeadTimeOffset { get; set; }
 
-        [JsonPropertyName("OpsLeadTimeOffsetUnit")]
+        [JsonProperty("OpsLeadTimeOffsetUnit")]
         public string OpsLeadTimeOffsetUnit { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompRequisitioner")]
+        [JsonProperty("MaintOrdOpCompRequisitioner")]
         public string MaintOrdOpCompRequisitioner { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompProcmtTrckgNmbr")]
+        [JsonProperty("MaintOrdOpCompProcmtTrckgNmbr")]
         public string MaintOrdOpCompProcmtTrckgNmbr { get; set; }
 
-        [JsonPropertyName("ResponsiblePurchaseOrg")]
+        [JsonProperty("ResponsiblePurchaseOrg")]
         public string ResponsiblePurchaseOrg { get; set; }
 
-        [JsonPropertyName("MaintOrdOpCompSpecialStockType")]
+        [JsonProperty("MaintOrdOpCompSpecialStockType")]
         public string MaintOrdOpCompSpecialStockType { get; set; }
 
-        [JsonPropertyName("VariableSizeDimension1")]
+        [JsonProperty("VariableSizeDimension1")]
         public string VariableSizeDimension1 { get; set; }
 
-        [JsonPropertyName("VariableSizeDimensionUnit")]
+        [JsonProperty("VariableSizeDimensionUnit")]
         public string VariableSizeDimensionUnit { get; set; }
 
-        [JsonPropertyName("VariableSizeCompFormulaKey")]
+        [JsonProperty("VariableSizeCompFormulaKey")]
         public string VariableSizeCompFormulaKey { get; set; }
 
-        [JsonPropertyName("VariableSizeDimension2")]
+        [JsonProperty("VariableSizeDimension2")]
         public string VariableSizeDimension2 { get; set; }
 
-        [JsonPropertyName("NumberOfVariableSizeItem")]
+        [JsonProperty("NumberOfVariableSizeItem")]
         public int NumberOfVariableSizeItem { get; set; }
 
-        [JsonPropertyName("VariableSizeDimension3")]
+        [JsonProperty("VariableSizeDimension3")]
         public string VariableSizeDimension3 { get; set; }
 
-        [JsonPropertyName("VariableSizeItemQuantity")]
+        [JsonProperty("VariableSizeItemQuantity")]
         public string VariableSizeItemQuantity { get; set; }
 
-        [JsonPropertyName("VariableSizeComponentUnit")]
+        [JsonProperty("VariableSizeComponentUnit")]
         public string VariableSizeComponentUnit { get; set; }
 
-        [JsonPropertyName("RqmtDateIsEnteredManually")]
+        [JsonProperty("RqmtDateIsEnteredManually")]
         public bool RqmtDateIsEnteredManually { get; set; }
 
-        [JsonPropertyName("SupplierProduct")]
+        [JsonProperty("SupplierProduct")]
         public string SupplierProduct { get; set; }
 
-        [JsonPropertyName("MaintOrdCompPurOutlineAgrmtItm")]
+        [JsonProperty("MaintOrdCompPurOutlineAgrmtItm")]
         public string MaintOrdCompPurOutlineAgrmtItm { get; set; }
 
-        [JsonPropertyName("ControllingArea")]
+        [JsonProperty("ControllingArea")]
         public string ControllingArea { get; set; }
 
-        [JsonPropertyName("MaintOrderComponentInternalID")]
+        [JsonProperty("MaintOrderComponentInternalID")]
         public string MaintOrderComponentInternalID { get; set; }
 
-        [JsonPropertyName("PurchaseRequisition")]
+        [JsonProperty("PurchaseRequisition")]
         public string PurchaseRequisition { get; set; }
 
-        [JsonPropertyName("PurchaseRequisitionItem")]
+        [JsonProperty("PurchaseRequisitionItem")]
         public string PurchaseRequisitionItem { get; set; }
 
-        [JsonPropertyName("to_MaintenanceOrder")]
+        [JsonProperty("to_MaintenanceOrder")]
         public OperationFindIdToMaintenanceOrder ToMaintenanceOrder { get; set; }
 
-        [JsonPropertyName("to_MaintenanceOrderOperation")]
+        [JsonProperty("to_MaintenanceOrderOperation")]
         public OperationFindIdToMaintenanceOrderOperation ToMaintenanceOrderOperation { get; set; }
     }
     public class ModelOperationFindId
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public OperationFindIdDetail D { get; set; }
     }
     public class OperationFindIdToMaintenanceOrder
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationFindIdDeferred Deferred { get; set; }
     }
     public class OperationFindIdToMaintenanceOrderOperation
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public OperationFindIdDeferred Deferred { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace GMM.Application.Models
@@ -10,88 +10,88 @@ namespace GMM.Application.Models
     // Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
     public class CauseDetail
     {
-        [JsonPropertyName("results")]
+        [JsonProperty("results")]
         public List<CauseResult> Results { get; set; }
     }
 
     public class CauseDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
 
     public class CauseMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
 
     public class CauseResult
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public CauseMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceNotification")]
+        [JsonProperty("MaintenanceNotification")]
         public string MaintenanceNotification { get; set; }
 
-        [JsonPropertyName("MaintenanceNotificationItem")]
+        [JsonProperty("MaintenanceNotificationItem")]
         public string MaintenanceNotificationItem { get; set; }
 
-        [JsonPropertyName("MaintenanceNotificationCause")]
+        [JsonProperty("MaintenanceNotificationCause")]
         public string MaintenanceNotificationCause { get; set; }
 
-        [JsonPropertyName("MaintNotifCauseText")]
+        [JsonProperty("MaintNotifCauseText")]
         public string MaintNotifCauseText { get; set; }
 
-        [JsonPropertyName("MaintNotifCauseCodeGroup")]
+        [JsonProperty("MaintNotifCauseCodeGroup")]
         public string MaintNotifCauseCodeGroup { get; set; }
 
-        [JsonPropertyName("MaintNotifCauseCodeGroupName")]
+        [JsonProperty("MaintNotifCauseCodeGroupName")]
         public string MaintNotifCauseCodeGroupName { get; set; }
 
-        [JsonPropertyName("MaintNotificationCauseCode")]
+        [JsonProperty("MaintNotificationCauseCode")]
         public string MaintNotificationCauseCode { get; set; }
 
-        [JsonPropertyName("MaintNotificationCauseCodeName")]
+        [JsonProperty("MaintNotificationCauseCodeName")]
         public string MaintNotificationCauseCodeName { get; set; }
 
-        [JsonPropertyName("MaintNotificationRootCause")]
+        [JsonProperty("MaintNotificationRootCause")]
         public string MaintNotificationRootCause { get; set; }
 
-        [JsonPropertyName("MaintNotificationRootCauseText")]
+        [JsonProperty("MaintNotificationRootCauseText")]
         public string MaintNotificationRootCauseText { get; set; }
 
-        [JsonPropertyName("IsDeleted")]
+        [JsonProperty("IsDeleted")]
         public bool IsDeleted { get; set; }
 
-        [JsonPropertyName("to_Item")]
+        [JsonProperty("to_Item")]
         public CauseToItem ToItem { get; set; }
 
-        [JsonPropertyName("to_Notif")]
+        [JsonProperty("to_Notif")]
         public CauseToNotif ToNotif { get; set; }
     }
 
     public class ModelCause
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public CauseDetail D { get; set; }
     }
 
     public class CauseToItem
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public CauseDeferred Deferred { get; set; }
     }
 
     public class CauseToNotif
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public CauseDeferred Deferred { get; set; }
     }
 

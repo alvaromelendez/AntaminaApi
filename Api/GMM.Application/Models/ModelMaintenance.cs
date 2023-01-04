@@ -1,504 +1,504 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace GMM.Application.Models
 {
     public class ModelMaintenanceDetail
     {
-        [JsonPropertyName("results")]
+        [JsonProperty("results")]
         public List<ModelMaintenanceResult> Results { get; set; }
 
-        [JsonPropertyName("__next")]
+        [JsonProperty("__next")]
         public string Next { get; set; }
     }
     public class ModelMaintenanceDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
     public class ModelMaintenanceMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
     public class ModelMaintenanceResult
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public ModelMaintenanceMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceOrder")]
+        [JsonProperty("MaintenanceOrder")]
         public string MaintenanceOrder { get; set; }
 
-        [JsonPropertyName("MaintOrderRoutingNumber")]
+        [JsonProperty("MaintOrderRoutingNumber")]
         public string MaintOrderRoutingNumber { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderType")]
+        [JsonProperty("MaintenanceOrderType")]
         public string MaintenanceOrderType { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderDesc")]
+        [JsonProperty("MaintenanceOrderDesc")]
         public string MaintenanceOrderDesc { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicStartDateTime")]
+        [JsonProperty("MaintOrdBasicStartDateTime")]
         public DateTime MaintOrdBasicStartDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicEndDateTime")]
+        [JsonProperty("MaintOrdBasicEndDateTime")]
         public DateTime MaintOrdBasicEndDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicStartDate")]
+        [JsonProperty("MaintOrdBasicStartDate")]
         public DateTime MaintOrdBasicStartDate { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicStartTime")]
+        [JsonProperty("MaintOrdBasicStartTime")]
         public string MaintOrdBasicStartTime { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicEndDate")]
+        [JsonProperty("MaintOrdBasicEndDate")]
         public DateTime MaintOrdBasicEndDate { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicEndTime")]
+        [JsonProperty("MaintOrdBasicEndTime")]
         public string MaintOrdBasicEndTime { get; set; }
 
-        [JsonPropertyName("MaintOrdSchedldBscStrtDateTime")]
+        [JsonProperty("MaintOrdSchedldBscStrtDateTime")]
         public DateTime MaintOrdSchedldBscStrtDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrdSchedldBscEndDateTime")]
+        [JsonProperty("MaintOrdSchedldBscEndDateTime")]
         public DateTime MaintOrdSchedldBscEndDateTime { get; set; }
 
-        [JsonPropertyName("ScheduledBasicStartDate")]
+        [JsonProperty("ScheduledBasicStartDate")]
         public DateTime ScheduledBasicStartDate { get; set; }
 
-        [JsonPropertyName("ScheduledBasicStartTime")]
+        [JsonProperty("ScheduledBasicStartTime")]
         public string ScheduledBasicStartTime { get; set; }
 
-        [JsonPropertyName("ScheduledBasicEndDate")]
+        [JsonProperty("ScheduledBasicEndDate")]
         public DateTime ScheduledBasicEndDate { get; set; }
 
-        [JsonPropertyName("ScheduledBasicEndTime")]
+        [JsonProperty("ScheduledBasicEndTime")]
         public string ScheduledBasicEndTime { get; set; }
 
-        [JsonPropertyName("MaintOrderReferenceDateTime")]
+        [JsonProperty("MaintOrderReferenceDateTime")]
         public DateTime MaintOrderReferenceDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrderReferenceDate")]
+        [JsonProperty("MaintOrderReferenceDate")]
         public DateTime MaintOrderReferenceDate { get; set; }
 
-        [JsonPropertyName("MaintOrderReferenceTime")]
+        [JsonProperty("MaintOrderReferenceTime")]
         public string MaintOrderReferenceTime { get; set; }
 
-        [JsonPropertyName("MaintenanceNotification")]
+        [JsonProperty("MaintenanceNotification")]
         public string MaintenanceNotification { get; set; }
 
-        [JsonPropertyName("OrdIsNotSchedldAutomatically")]
+        [JsonProperty("OrdIsNotSchedldAutomatically")]
         public string OrdIsNotSchedldAutomatically { get; set; }
 
-        [JsonPropertyName("ControllingArea")]
+        [JsonProperty("ControllingArea")]
         public string ControllingArea { get; set; }
 
-        [JsonPropertyName("MainWorkCenterInternalID")]
+        [JsonProperty("MainWorkCenterInternalID")]
         public string MainWorkCenterInternalID { get; set; }
 
-        [JsonPropertyName("MainWorkCenterTypeCode")]
+        [JsonProperty("MainWorkCenterTypeCode")]
         public string MainWorkCenterTypeCode { get; set; }
 
-        [JsonPropertyName("MainWorkCenter")]
+        [JsonProperty("MainWorkCenter")]
         public string MainWorkCenter { get; set; }
 
-        [JsonPropertyName("MainWorkCenterPlant")]
+        [JsonProperty("MainWorkCenterPlant")]
         public string MainWorkCenterPlant { get; set; }
 
-        [JsonPropertyName("WorkCenterInternalID")]
+        [JsonProperty("WorkCenterInternalID")]
         public string WorkCenterInternalID { get; set; }
 
-        [JsonPropertyName("WorkCenterTypeCode")]
+        [JsonProperty("WorkCenterTypeCode")]
         public string WorkCenterTypeCode { get; set; }
 
-        [JsonPropertyName("WorkCenter")]
+        [JsonProperty("WorkCenter")]
         public string WorkCenter { get; set; }
 
-        [JsonPropertyName("MaintenancePlanningPlant")]
+        [JsonProperty("MaintenancePlanningPlant")]
         public string MaintenancePlanningPlant { get; set; }
 
-        [JsonPropertyName("MaintenancePlant")]
+        [JsonProperty("MaintenancePlant")]
         public string MaintenancePlant { get; set; }
 
-        [JsonPropertyName("Assembly")]
+        [JsonProperty("Assembly")]
         public string Assembly { get; set; }
 
-        [JsonPropertyName("MaintOrdProcessPhaseCode")]
+        [JsonProperty("MaintOrdProcessPhaseCode")]
         public string MaintOrdProcessPhaseCode { get; set; }
 
-        [JsonPropertyName("MaintOrdProcessSubPhaseCode")]
+        [JsonProperty("MaintOrdProcessSubPhaseCode")]
         public string MaintOrdProcessSubPhaseCode { get; set; }
 
-        [JsonPropertyName("BusinessArea")]
+        [JsonProperty("BusinessArea")]
         public string BusinessArea { get; set; }
 
-        [JsonPropertyName("ReferenceElement")]
+        [JsonProperty("ReferenceElement")]
         public string ReferenceElement { get; set; }
 
-        [JsonPropertyName("FunctionalArea")]
+        [JsonProperty("FunctionalArea")]
         public string FunctionalArea { get; set; }
 
-        [JsonPropertyName("AdditionalDeviceData")]
+        [JsonProperty("AdditionalDeviceData")]
         public string AdditionalDeviceData { get; set; }
 
-        [JsonPropertyName("Equipment")]
+        [JsonProperty("Equipment")]
         public string Equipment { get; set; }
 
-        [JsonPropertyName("EquipmentName")]
+        [JsonProperty("EquipmentName")]
         public string EquipmentName { get; set; }
 
-        [JsonPropertyName("FunctionalLocation")]
+        [JsonProperty("FunctionalLocation")]
         public string FunctionalLocation { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderPlanningCode")]
+        [JsonProperty("MaintenanceOrderPlanningCode")]
         public string MaintenanceOrderPlanningCode { get; set; }
 
-        [JsonPropertyName("MaintenancePlannerGroup")]
+        [JsonProperty("MaintenancePlannerGroup")]
         public string MaintenancePlannerGroup { get; set; }
 
-        [JsonPropertyName("MaintenanceActivityType")]
+        [JsonProperty("MaintenanceActivityType")]
         public string MaintenanceActivityType { get; set; }
 
-        [JsonPropertyName("MaintPriority")]
+        [JsonProperty("MaintPriority")]
         public string MaintPriority { get; set; }
 
-        [JsonPropertyName("MaintPriorityType")]
+        [JsonProperty("MaintPriorityType")]
         public string MaintPriorityType { get; set; }
 
-        [JsonPropertyName("OrderProcessingGroup")]
+        [JsonProperty("OrderProcessingGroup")]
         public string OrderProcessingGroup { get; set; }
 
-        [JsonPropertyName("ProfitCenter")]
+        [JsonProperty("ProfitCenter")]
         public string ProfitCenter { get; set; }
 
-        [JsonPropertyName("ResponsibleCostCenter")]
+        [JsonProperty("ResponsibleCostCenter")]
         public string ResponsibleCostCenter { get; set; }
 
-        [JsonPropertyName("MaintenanceRevision")]
+        [JsonProperty("MaintenanceRevision")]
         public string MaintenanceRevision { get; set; }
 
-        [JsonPropertyName("SerialNumber")]
+        [JsonProperty("SerialNumber")]
         public string SerialNumber { get; set; }
 
-        [JsonPropertyName("SuperiorProjectNetwork")]
+        [JsonProperty("SuperiorProjectNetwork")]
         public string SuperiorProjectNetwork { get; set; }
 
-        [JsonPropertyName("OperationSystemCondition")]
+        [JsonProperty("OperationSystemCondition")]
         public string OperationSystemCondition { get; set; }
 
-        [JsonPropertyName("WBSElementInternalID")]
+        [JsonProperty("WBSElementInternalID")]
         public string WBSElementInternalID { get; set; }
 
-        [JsonPropertyName("ControllingObjectClass")]
+        [JsonProperty("ControllingObjectClass")]
         public string ControllingObjectClass { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderInternalID")]
+        [JsonProperty("MaintenanceOrderInternalID")]
         public string MaintenanceOrderInternalID { get; set; }
 
-        [JsonPropertyName("MaintenanceObjectList")]
+        [JsonProperty("MaintenanceObjectList")]
         public string MaintenanceObjectList { get; set; }
 
-        [JsonPropertyName("MaintObjectLocAcctAssgmtNmbr")]
+        [JsonProperty("MaintObjectLocAcctAssgmtNmbr")]
         public string MaintObjectLocAcctAssgmtNmbr { get; set; }
 
-        [JsonPropertyName("AssetLocation")]
+        [JsonProperty("AssetLocation")]
         public string AssetLocation { get; set; }
 
-        [JsonPropertyName("AssetRoom")]
+        [JsonProperty("AssetRoom")]
         public string AssetRoom { get; set; }
 
-        [JsonPropertyName("PlantSection")]
+        [JsonProperty("PlantSection")]
         public string PlantSection { get; set; }
 
-        [JsonPropertyName("ABCIndicator")]
+        [JsonProperty("ABCIndicator")]
         public string ABCIndicator { get; set; }
 
-        [JsonPropertyName("MaintObjectFreeDefinedAttrib")]
+        [JsonProperty("MaintObjectFreeDefinedAttrib")]
         public string MaintObjectFreeDefinedAttrib { get; set; }
 
-        [JsonPropertyName("BasicSchedulingType")]
+        [JsonProperty("BasicSchedulingType")]
         public string BasicSchedulingType { get; set; }
 
-        [JsonPropertyName("LatestAcceptableCompletionDate")]
+        [JsonProperty("LatestAcceptableCompletionDate")]
         public DateTime? LatestAcceptableCompletionDate { get; set; }
 
-        [JsonPropertyName("MaintOrdPersonResponsible")]
+        [JsonProperty("MaintOrdPersonResponsible")]
         public string MaintOrdPersonResponsible { get; set; }
 
-        [JsonPropertyName("LastChangeDateTime")]
+        [JsonProperty("LastChangeDateTime")]
         public DateTime LastChangeDateTime { get; set; }
 
-        [JsonPropertyName("CreatedByUser")]
+        [JsonProperty("CreatedByUser")]
         public string CreatedByUser { get; set; }
 
-        [JsonPropertyName("LocAcctAssgmtWBSElmntIntID")]
+        [JsonProperty("LocAcctAssgmtWBSElmntIntID")]
         public string LocAcctAssgmtWBSElmntIntID { get; set; }
 
-        [JsonPropertyName("TechnicalObject")]
+        [JsonProperty("TechnicalObject")]
         public string TechnicalObject { get; set; }
 
-        [JsonPropertyName("TechnicalObjectLabel")]
+        [JsonProperty("TechnicalObjectLabel")]
         public string TechnicalObjectLabel { get; set; }
 
-        [JsonPropertyName("TechObjIsEquipOrFuncnlLoc")]
+        [JsonProperty("TechObjIsEquipOrFuncnlLoc")]
         public string TechObjIsEquipOrFuncnlLoc { get; set; }
 
-        [JsonPropertyName("to_MaintenanceOrderOperation")]
+        [JsonProperty("to_MaintenanceOrderOperation")]
         public ModelMaintenanceToMaintenanceOrderOperation ToMaintenanceOrderOperation { get; set; }
 
-        [JsonPropertyName("to_MaintOrderObjectListItem")]
+        [JsonProperty("to_MaintOrderObjectListItem")]
         public ModelMaintenanceToMaintOrderObjectListItem ToMaintOrderObjectListItem { get; set; }
     }
     public class ModelMaintenanceFindAll
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public ModelMaintenanceDetail D { get; set; }
     }
     public class ModelMaintenanceToMaintenanceOrderOperation
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public ModelMaintenanceDeferred Deferred { get; set; }
     }
     public class ModelMaintenanceToMaintOrderObjectListItem
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public ModelMaintenanceDeferred Deferred { get; set; }
     }
 
     public class ModelMaintenanceData
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public ModelMaintenanceMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceOrder")]
+        [JsonProperty("MaintenanceOrder")]
         public string MaintenanceOrder { get; set; }
 
-        [JsonPropertyName("MaintOrderRoutingNumber")]
+        [JsonProperty("MaintOrderRoutingNumber")]
         public string MaintOrderRoutingNumber { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderType")]
+        [JsonProperty("MaintenanceOrderType")]
         public string MaintenanceOrderType { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderDesc")]
+        [JsonProperty("MaintenanceOrderDesc")]
         public string MaintenanceOrderDesc { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicStartDateTime")]
+        [JsonProperty("MaintOrdBasicStartDateTime")]
         public DateTime MaintOrdBasicStartDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicEndDateTime")]
+        [JsonProperty("MaintOrdBasicEndDateTime")]
         public DateTime MaintOrdBasicEndDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicStartDate")]
+        [JsonProperty("MaintOrdBasicStartDate")]
         public DateTime MaintOrdBasicStartDate { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicStartTime")]
+        [JsonProperty("MaintOrdBasicStartTime")]
         public string MaintOrdBasicStartTime { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicEndDate")]
+        [JsonProperty("MaintOrdBasicEndDate")]
         public DateTime MaintOrdBasicEndDate { get; set; }
 
-        [JsonPropertyName("MaintOrdBasicEndTime")]
+        [JsonProperty("MaintOrdBasicEndTime")]
         public string MaintOrdBasicEndTime { get; set; }
 
-        [JsonPropertyName("MaintOrdSchedldBscStrtDateTime")]
+        [JsonProperty("MaintOrdSchedldBscStrtDateTime")]
         public DateTime MaintOrdSchedldBscStrtDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrdSchedldBscEndDateTime")]
+        [JsonProperty("MaintOrdSchedldBscEndDateTime")]
         public DateTime MaintOrdSchedldBscEndDateTime { get; set; }
 
-        [JsonPropertyName("ScheduledBasicStartDate")]
+        [JsonProperty("ScheduledBasicStartDate")]
         public DateTime ScheduledBasicStartDate { get; set; }
 
-        [JsonPropertyName("ScheduledBasicStartTime")]
+        [JsonProperty("ScheduledBasicStartTime")]
         public string ScheduledBasicStartTime { get; set; }
 
-        [JsonPropertyName("ScheduledBasicEndDate")]
+        [JsonProperty("ScheduledBasicEndDate")]
         public DateTime ScheduledBasicEndDate { get; set; }
 
-        [JsonPropertyName("ScheduledBasicEndTime")]
+        [JsonProperty("ScheduledBasicEndTime")]
         public string ScheduledBasicEndTime { get; set; }
 
-        [JsonPropertyName("MaintOrderReferenceDateTime")]
+        [JsonProperty("MaintOrderReferenceDateTime")]
         public DateTime MaintOrderReferenceDateTime { get; set; }
 
-        [JsonPropertyName("MaintOrderReferenceDate")]
+        [JsonProperty("MaintOrderReferenceDate")]
         public DateTime MaintOrderReferenceDate { get; set; }
 
-        [JsonPropertyName("MaintOrderReferenceTime")]
+        [JsonProperty("MaintOrderReferenceTime")]
         public string MaintOrderReferenceTime { get; set; }
 
-        [JsonPropertyName("MaintenanceNotification")]
+        [JsonProperty("MaintenanceNotification")]
         public string MaintenanceNotification { get; set; }
 
-        [JsonPropertyName("OrdIsNotSchedldAutomatically")]
+        [JsonProperty("OrdIsNotSchedldAutomatically")]
         public string OrdIsNotSchedldAutomatically { get; set; }
 
-        [JsonPropertyName("ControllingArea")]
+        [JsonProperty("ControllingArea")]
         public string ControllingArea { get; set; }
 
-        [JsonPropertyName("MainWorkCenterInternalID")]
+        [JsonProperty("MainWorkCenterInternalID")]
         public string MainWorkCenterInternalID { get; set; }
 
-        [JsonPropertyName("MainWorkCenterTypeCode")]
+        [JsonProperty("MainWorkCenterTypeCode")]
         public string MainWorkCenterTypeCode { get; set; }
 
-        [JsonPropertyName("MainWorkCenter")]
+        [JsonProperty("MainWorkCenter")]
         public string MainWorkCenter { get; set; }
 
-        [JsonPropertyName("MainWorkCenterPlant")]
+        [JsonProperty("MainWorkCenterPlant")]
         public string MainWorkCenterPlant { get; set; }
 
-        [JsonPropertyName("WorkCenterInternalID")]
+        [JsonProperty("WorkCenterInternalID")]
         public string WorkCenterInternalID { get; set; }
 
-        [JsonPropertyName("WorkCenterTypeCode")]
+        [JsonProperty("WorkCenterTypeCode")]
         public string WorkCenterTypeCode { get; set; }
 
-        [JsonPropertyName("WorkCenter")]
+        [JsonProperty("WorkCenter")]
         public string WorkCenter { get; set; }
 
-        [JsonPropertyName("MaintenancePlanningPlant")]
+        [JsonProperty("MaintenancePlanningPlant")]
         public string MaintenancePlanningPlant { get; set; }
 
-        [JsonPropertyName("MaintenancePlant")]
+        [JsonProperty("MaintenancePlant")]
         public string MaintenancePlant { get; set; }
 
-        [JsonPropertyName("Assembly")]
+        [JsonProperty("Assembly")]
         public string Assembly { get; set; }
 
-        [JsonPropertyName("MaintOrdProcessPhaseCode")]
+        [JsonProperty("MaintOrdProcessPhaseCode")]
         public string MaintOrdProcessPhaseCode { get; set; }
 
-        [JsonPropertyName("MaintOrdProcessSubPhaseCode")]
+        [JsonProperty("MaintOrdProcessSubPhaseCode")]
         public string MaintOrdProcessSubPhaseCode { get; set; }
 
-        [JsonPropertyName("BusinessArea")]
+        [JsonProperty("BusinessArea")]
         public string BusinessArea { get; set; }
 
-        [JsonPropertyName("ReferenceElement")]
+        [JsonProperty("ReferenceElement")]
         public string ReferenceElement { get; set; }
 
-        [JsonPropertyName("FunctionalArea")]
+        [JsonProperty("FunctionalArea")]
         public string FunctionalArea { get; set; }
 
-        [JsonPropertyName("AdditionalDeviceData")]
+        [JsonProperty("AdditionalDeviceData")]
         public string AdditionalDeviceData { get; set; }
 
-        [JsonPropertyName("Equipment")]
+        [JsonProperty("Equipment")]
         public string Equipment { get; set; }
 
-        [JsonPropertyName("EquipmentName")]
+        [JsonProperty("EquipmentName")]
         public string EquipmentName { get; set; }
 
-        [JsonPropertyName("FunctionalLocation")]
+        [JsonProperty("FunctionalLocation")]
         public string FunctionalLocation { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderPlanningCode")]
+        [JsonProperty("MaintenanceOrderPlanningCode")]
         public string MaintenanceOrderPlanningCode { get; set; }
 
-        [JsonPropertyName("MaintenancePlannerGroup")]
+        [JsonProperty("MaintenancePlannerGroup")]
         public string MaintenancePlannerGroup { get; set; }
 
-        [JsonPropertyName("MaintenanceActivityType")]
+        [JsonProperty("MaintenanceActivityType")]
         public string MaintenanceActivityType { get; set; }
 
-        [JsonPropertyName("MaintPriority")]
+        [JsonProperty("MaintPriority")]
         public string MaintPriority { get; set; }
 
-        [JsonPropertyName("MaintPriorityType")]
+        [JsonProperty("MaintPriorityType")]
         public string MaintPriorityType { get; set; }
 
-        [JsonPropertyName("OrderProcessingGroup")]
+        [JsonProperty("OrderProcessingGroup")]
         public string OrderProcessingGroup { get; set; }
 
-        [JsonPropertyName("ProfitCenter")]
+        [JsonProperty("ProfitCenter")]
         public string ProfitCenter { get; set; }
 
-        [JsonPropertyName("ResponsibleCostCenter")]
+        [JsonProperty("ResponsibleCostCenter")]
         public string ResponsibleCostCenter { get; set; }
 
-        [JsonPropertyName("MaintenanceRevision")]
+        [JsonProperty("MaintenanceRevision")]
         public string MaintenanceRevision { get; set; }
 
-        [JsonPropertyName("SerialNumber")]
+        [JsonProperty("SerialNumber")]
         public string SerialNumber { get; set; }
 
-        [JsonPropertyName("SuperiorProjectNetwork")]
+        [JsonProperty("SuperiorProjectNetwork")]
         public string SuperiorProjectNetwork { get; set; }
 
-        [JsonPropertyName("OperationSystemCondition")]
+        [JsonProperty("OperationSystemCondition")]
         public string OperationSystemCondition { get; set; }
 
-        [JsonPropertyName("WBSElementInternalID")]
+        [JsonProperty("WBSElementInternalID")]
         public string WBSElementInternalID { get; set; }
 
-        [JsonPropertyName("ControllingObjectClass")]
+        [JsonProperty("ControllingObjectClass")]
         public string ControllingObjectClass { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderInternalID")]
+        [JsonProperty("MaintenanceOrderInternalID")]
         public string MaintenanceOrderInternalID { get; set; }
 
-        [JsonPropertyName("MaintenanceObjectList")]
+        [JsonProperty("MaintenanceObjectList")]
         public string MaintenanceObjectList { get; set; }
 
-        [JsonPropertyName("MaintObjectLocAcctAssgmtNmbr")]
+        [JsonProperty("MaintObjectLocAcctAssgmtNmbr")]
         public string MaintObjectLocAcctAssgmtNmbr { get; set; }
 
-        [JsonPropertyName("AssetLocation")]
+        [JsonProperty("AssetLocation")]
         public string AssetLocation { get; set; }
 
-        [JsonPropertyName("AssetRoom")]
+        [JsonProperty("AssetRoom")]
         public string AssetRoom { get; set; }
 
-        [JsonPropertyName("PlantSection")]
+        [JsonProperty("PlantSection")]
         public string PlantSection { get; set; }
 
-        [JsonPropertyName("ABCIndicator")]
+        [JsonProperty("ABCIndicator")]
         public string ABCIndicator { get; set; }
 
-        [JsonPropertyName("MaintObjectFreeDefinedAttrib")]
+        [JsonProperty("MaintObjectFreeDefinedAttrib")]
         public string MaintObjectFreeDefinedAttrib { get; set; }
 
-        [JsonPropertyName("BasicSchedulingType")]
+        [JsonProperty("BasicSchedulingType")]
         public string BasicSchedulingType { get; set; }
 
-        [JsonPropertyName("LatestAcceptableCompletionDate")]
+        [JsonProperty("LatestAcceptableCompletionDate")]
         public object LatestAcceptableCompletionDate { get; set; }
 
-        [JsonPropertyName("MaintOrdPersonResponsible")]
+        [JsonProperty("MaintOrdPersonResponsible")]
         public string MaintOrdPersonResponsible { get; set; }
 
-        [JsonPropertyName("LastChangeDateTime")]
+        [JsonProperty("LastChangeDateTime")]
         public DateTime LastChangeDateTime { get; set; }
 
-        [JsonPropertyName("CreatedByUser")]
+        [JsonProperty("CreatedByUser")]
         public string CreatedByUser { get; set; }
 
-        [JsonPropertyName("LocAcctAssgmtWBSElmntIntID")]
+        [JsonProperty("LocAcctAssgmtWBSElmntIntID")]
         public string LocAcctAssgmtWBSElmntIntID { get; set; }
 
-        [JsonPropertyName("TechnicalObject")]
+        [JsonProperty("TechnicalObject")]
         public string TechnicalObject { get; set; }
 
-        [JsonPropertyName("TechnicalObjectLabel")]
+        [JsonProperty("TechnicalObjectLabel")]
         public string TechnicalObjectLabel { get; set; }
 
-        [JsonPropertyName("TechObjIsEquipOrFuncnlLoc")]
+        [JsonProperty("TechObjIsEquipOrFuncnlLoc")]
         public string TechObjIsEquipOrFuncnlLoc { get; set; }
 
-        [JsonPropertyName("to_MaintenanceOrderOperation")]
+        [JsonProperty("to_MaintenanceOrderOperation")]
         public ModelMaintenanceToMaintenanceOrderOperation ToMaintenanceOrderOperation { get; set; }
 
-        [JsonPropertyName("to_MaintOrderObjectListItem")]
+        [JsonProperty("to_MaintOrderObjectListItem")]
         public ModelMaintenanceToMaintOrderObjectListItem ToMaintOrderObjectListItem { get; set; }
     }
     public class ModelMaintenanceFindByID
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public ModelMaintenanceData D { get; set; }
     }
 }

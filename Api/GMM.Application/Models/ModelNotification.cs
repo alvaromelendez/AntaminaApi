@@ -1,374 +1,374 @@
 ﻿using GMM.Domain.Entities;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace GMM.Application.Models
 {
     public class NotificationDetail
     {
-        [JsonPropertyName("results")]
+        [JsonProperty("results")]
         public List<NotificationResult> Results { get; set; }
 
-        [JsonPropertyName("__next")]
+        [JsonProperty("__next")]
         public string Next { get; set; }
     }
 
     public class NotificationDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
 
     public class NotificationMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
 
-        [JsonPropertyName("etag")]
+        [JsonProperty("etag")]
         public string Etag { get; set; }
     }
 
     public class NotificationResult
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public NotificationMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintenanceNotification")]
+        [JsonProperty("MaintenanceNotification")]
         public string MaintenanceNotification { get; set; }
 
-        [JsonPropertyName("MaintNotifInternalID")]
+        [JsonProperty("MaintNotifInternalID")]
         public string MaintNotifInternalID { get; set; }
 
-        [JsonPropertyName("NotificationText")]
+        [JsonProperty("NotificationText")]
         public string NotificationText { get; set; }
 
-        [JsonPropertyName("MaintPriority")]
+        [JsonProperty("MaintPriority")]
         public string MaintPriority { get; set; }
 
-        [JsonPropertyName("NotificationType")]
+        [JsonProperty("NotificationType")]
         public string NotificationType { get; set; }
 
-        [JsonPropertyName("NotifProcessingPhase")]
+        [JsonProperty("NotifProcessingPhase")]
         public string NotifProcessingPhase { get; set; }
 
-        [JsonPropertyName("NotifProcessingPhaseDesc")]
+        [JsonProperty("NotifProcessingPhaseDesc")]
         public string NotifProcessingPhaseDesc { get; set; }
 
-        [JsonPropertyName("MaintPriorityDesc")]
+        [JsonProperty("MaintPriorityDesc")]
         public string MaintPriorityDesc { get; set; }
 
-        [JsonPropertyName("CreationDate")]
+        [JsonProperty("CreationDate")]
         public DateTime CreationDate { get; set; }
 
-        [JsonPropertyName("LastChangeTime")]
+        [JsonProperty("LastChangeTime")]
         public string LastChangeTime { get; set; }
 
-        [JsonPropertyName("LastChangeDate")]
+        [JsonProperty("LastChangeDate")]
         public DateTime LastChangeDate { get; set; }
 
-        [JsonPropertyName("LastChangeDateTime")]
+        [JsonProperty("LastChangeDateTime")]
         public DateTime LastChangeDateTime { get; set; }
 
-        [JsonPropertyName("CreationTime")]
+        [JsonProperty("CreationTime")]
         public string CreationTime { get; set; }
 
-        [JsonPropertyName("ReportedByUser")]
+        [JsonProperty("ReportedByUser")]
         public string ReportedByUser { get; set; }
 
-        [JsonPropertyName("ReporterFullName")]
+        [JsonProperty("ReporterFullName")]
         public string ReporterFullName { get; set; }
 
-        [JsonPropertyName("PersonResponsible")]
+        [JsonProperty("PersonResponsible")]
         public string PersonResponsible { get; set; }
 
-        [JsonPropertyName("MalfunctionEffect")]
+        [JsonProperty("MalfunctionEffect")]
         public string MalfunctionEffect { get; set; }
 
-        [JsonPropertyName("MalfunctionEffectText")]
+        [JsonProperty("MalfunctionEffectText")]
         public string MalfunctionEffectText { get; set; }
 
-        [JsonPropertyName("MalfunctionStartDate")]
+        [JsonProperty("MalfunctionStartDate")]
         public DateTime? MalfunctionStartDate { get; set; }
 
-        [JsonPropertyName("MalfunctionStartTime")]
+        [JsonProperty("MalfunctionStartTime")]
         public string MalfunctionStartTime { get; set; }
 
-        [JsonPropertyName("MalfunctionEndDate")]
+        [JsonProperty("MalfunctionEndDate")]
         public DateTime? MalfunctionEndDate { get; set; }
 
-        [JsonPropertyName("MalfunctionEndTime")]
+        [JsonProperty("MalfunctionEndTime")]
         public string MalfunctionEndTime { get; set; }
 
-        [JsonPropertyName("MaintNotificationCatalog")]
+        [JsonProperty("MaintNotificationCatalog")]
         public string MaintNotificationCatalog { get; set; }
 
-        [JsonPropertyName("MaintNotificationCode")]
+        [JsonProperty("MaintNotificationCode")]
         public string MaintNotificationCode { get; set; }
 
-        [JsonPropertyName("MaintNotificationCodeGroup")]
+        [JsonProperty("MaintNotificationCodeGroup")]
         public string MaintNotificationCodeGroup { get; set; }
 
-        [JsonPropertyName("CatalogProfile")]
+        [JsonProperty("CatalogProfile")]
         public string CatalogProfile { get; set; }
 
-        [JsonPropertyName("NotificationCreationDate")]
+        [JsonProperty("NotificationCreationDate")]
         public DateTime NotificationCreationDate { get; set; }
 
-        [JsonPropertyName("NotificationCreationTime")]
+        [JsonProperty("NotificationCreationTime")]
         public string NotificationCreationTime { get; set; }
 
-        [JsonPropertyName("NotificationTimeZone")]
+        [JsonProperty("NotificationTimeZone")]
         public string NotificationTimeZone { get; set; }
 
-        [JsonPropertyName("RequiredStartDate")]
+        [JsonProperty("RequiredStartDate")]
         public DateTime? RequiredStartDate { get; set; }
 
-        [JsonPropertyName("RequiredStartTime")]
+        [JsonProperty("RequiredStartTime")]
         public string RequiredStartTime { get; set; }
 
-        [JsonPropertyName("RequiredEndDate")]
+        [JsonProperty("RequiredEndDate")]
         public DateTime? RequiredEndDate { get; set; }
 
-        [JsonPropertyName("RequiredEndTime")]
+        [JsonProperty("RequiredEndTime")]
         public string RequiredEndTime { get; set; }
 
-        [JsonPropertyName("LatestAcceptableCompletionDate")]
+        [JsonProperty("LatestAcceptableCompletionDate")]
         public object LatestAcceptableCompletionDate { get; set; }
 
-        [JsonPropertyName("MaintenanceObjectIsDown")]
+        [JsonProperty("MaintenanceObjectIsDown")]
         public bool MaintenanceObjectIsDown { get; set; }
 
-        [JsonPropertyName("MaintNotificationLongText")]
+        [JsonProperty("MaintNotificationLongText")]
         public string MaintNotificationLongText { get; set; }
 
-        [JsonPropertyName("MaintNotifLongTextForEdit")]
+        [JsonProperty("MaintNotifLongTextForEdit")]
         public string MaintNotifLongTextForEdit { get; set; }
 
-        [JsonPropertyName("TechnicalObject")]
+        [JsonProperty("TechnicalObject")]
         public string TechnicalObject { get; set; }
 
-        [JsonPropertyName("TechObjIsEquipOrFuncnlLoc")]
+        [JsonProperty("TechObjIsEquipOrFuncnlLoc")]
         public string TechObjIsEquipOrFuncnlLoc { get; set; }
 
-        [JsonPropertyName("TechnicalObjectLabel")]
+        [JsonProperty("TechnicalObjectLabel")]
         public string TechnicalObjectLabel { get; set; }
 
-        [JsonPropertyName("MaintenancePlanningPlant")]
+        [JsonProperty("MaintenancePlanningPlant")]
         public string MaintenancePlanningPlant { get; set; }
 
-        [JsonPropertyName("MaintenancePlannerGroup")]
+        [JsonProperty("MaintenancePlannerGroup")]
         public string MaintenancePlannerGroup { get; set; }
 
-        [JsonPropertyName("PlantSection")]
+        [JsonProperty("PlantSection")]
         public string PlantSection { get; set; }
 
-        [JsonPropertyName("ABCIndicator")]
+        [JsonProperty("ABCIndicator")]
         public string ABCIndicator { get; set; }
 
-        [JsonPropertyName("SuperiorTechnicalObject")]
+        [JsonProperty("SuperiorTechnicalObject")]
         public string SuperiorTechnicalObject { get; set; }
 
-        [JsonPropertyName("SuperiorTechnicalObjectName")]
+        [JsonProperty("SuperiorTechnicalObjectName")]
         public string SuperiorTechnicalObjectName { get; set; }
 
-        [JsonPropertyName("SuperiorObjIsEquipOrFuncnlLoc")]
+        [JsonProperty("SuperiorObjIsEquipOrFuncnlLoc")]
         public string SuperiorObjIsEquipOrFuncnlLoc { get; set; }
 
-        [JsonPropertyName("SuperiorTechnicalObjectLabel")]
+        [JsonProperty("SuperiorTechnicalObjectLabel")]
         public string SuperiorTechnicalObjectLabel { get; set; }
 
-        [JsonPropertyName("ManufacturerPartTypeName")]
+        [JsonProperty("ManufacturerPartTypeName")]
         public string ManufacturerPartTypeName { get; set; }
 
-        [JsonPropertyName("TechObjIsEquipOrFuncnlLocDesc")]
+        [JsonProperty("TechObjIsEquipOrFuncnlLocDesc")]
         public string TechObjIsEquipOrFuncnlLocDesc { get; set; }
 
-        [JsonPropertyName("FunctionalLocation")]
+        [JsonProperty("FunctionalLocation")]
         public string FunctionalLocation { get; set; }
 
-        [JsonPropertyName("FunctionalLocationLabelName")]
+        [JsonProperty("FunctionalLocationLabelName")]
         public string FunctionalLocationLabelName { get; set; }
 
-        [JsonPropertyName("TechnicalObjectDescription")]
+        [JsonProperty("TechnicalObjectDescription")]
         public string TechnicalObjectDescription { get; set; }
 
-        [JsonPropertyName("AssetLocation")]
+        [JsonProperty("AssetLocation")]
         public string AssetLocation { get; set; }
 
-        [JsonPropertyName("LocationName")]
+        [JsonProperty("LocationName")]
         public string LocationName { get; set; }
 
-        [JsonPropertyName("BusinessArea")]
+        [JsonProperty("BusinessArea")]
         public string BusinessArea { get; set; }
 
-        [JsonPropertyName("CompanyCode")]
+        [JsonProperty("CompanyCode")]
         public string CompanyCode { get; set; }
 
-        [JsonPropertyName("TechnicalObjectCategory")]
+        [JsonProperty("TechnicalObjectCategory")]
         public string TechnicalObjectCategory { get; set; }
 
-        [JsonPropertyName("TechnicalObjectType")]
+        [JsonProperty("TechnicalObjectType")]
         public string TechnicalObjectType { get; set; }
 
-        [JsonPropertyName("MainWorkCenterPlant")]
+        [JsonProperty("MainWorkCenterPlant")]
         public string MainWorkCenterPlant { get; set; }
 
-        [JsonPropertyName("MainWorkCenter")]
+        [JsonProperty("MainWorkCenter")]
         public string MainWorkCenter { get; set; }
 
-        [JsonPropertyName("PlantName")]
+        [JsonProperty("PlantName")]
         public string PlantName { get; set; }
 
-        [JsonPropertyName("MaintenancePlannerGroupName")]
+        [JsonProperty("MaintenancePlannerGroupName")]
         public string MaintenancePlannerGroupName { get; set; }
 
-        [JsonPropertyName("MaintenancePlant")]
+        [JsonProperty("MaintenancePlant")]
         public string MaintenancePlant { get; set; }
 
-        [JsonPropertyName("LocationDescription")]
+        [JsonProperty("LocationDescription")]
         public string LocationDescription { get; set; }
 
-        [JsonPropertyName("MainWorkCenterText")]
+        [JsonProperty("MainWorkCenterText")]
         public string MainWorkCenterText { get; set; }
 
-        [JsonPropertyName("MainWorkCenterPlantName")]
+        [JsonProperty("MainWorkCenterPlantName")]
         public string MainWorkCenterPlantName { get; set; }
 
-        [JsonPropertyName("MaintenancePlantName")]
+        [JsonProperty("MaintenancePlantName")]
         public string MaintenancePlantName { get; set; }
 
-        [JsonPropertyName("PlantSectionPersonRespName")]
+        [JsonProperty("PlantSectionPersonRespName")]
         public string PlantSectionPersonRespName { get; set; }
 
-        [JsonPropertyName("ABCIndicatorDesc")]
+        [JsonProperty("ABCIndicatorDesc")]
         public string ABCIndicatorDesc { get; set; }
 
-        [JsonPropertyName("PersonResponsibleName")]
+        [JsonProperty("PersonResponsibleName")]
         public string PersonResponsibleName { get; set; }
 
-        [JsonPropertyName("MaintenanceOrder")]
+        [JsonProperty("MaintenanceOrder")]
         public string MaintenanceOrder { get; set; }
 
-        [JsonPropertyName("MaintenanceOrderType")]
+        [JsonProperty("MaintenanceOrderType")]
         public string MaintenanceOrderType { get; set; }
 
-        [JsonPropertyName("ConcatenatedActiveSystStsName")]
+        [JsonProperty("ConcatenatedActiveSystStsName")]
         public string ConcatenatedActiveSystStsName { get; set; }
 
-        [JsonPropertyName("MaintenanceActivityType")]
+        [JsonProperty("MaintenanceActivityType")]
         public string MaintenanceActivityType { get; set; }
 
-        [JsonPropertyName("MaintObjDowntimeDurationUnit")]
+        [JsonProperty("MaintObjDowntimeDurationUnit")]
         public string MaintObjDowntimeDurationUnit { get; set; }
 
-        [JsonPropertyName("MaintObjectDowntimeDuration")]
+        [JsonProperty("MaintObjectDowntimeDuration")]
         public string MaintObjectDowntimeDuration { get; set; }
 
-        [JsonPropertyName("MaintenancePlan")]
+        [JsonProperty("MaintenancePlan")]
         public string MaintenancePlan { get; set; }
 
-        [JsonPropertyName("MaintenanceItem")]
+        [JsonProperty("MaintenanceItem")]
         public string MaintenanceItem { get; set; }
 
-        [JsonPropertyName("TaskListGroup")]
+        [JsonProperty("TaskListGroup")]
         public string TaskListGroup { get; set; }
 
-        [JsonPropertyName("TaskListGroupCounter")]
+        [JsonProperty("TaskListGroupCounter")]
         public string TaskListGroupCounter { get; set; }
 
-        [JsonPropertyName("MaintenancePlanCallNumber")]
+        [JsonProperty("MaintenancePlanCallNumber")]
         public int MaintenancePlanCallNumber { get; set; }
 
-        [JsonPropertyName("MaintenanceTaskListType")]
+        [JsonProperty("MaintenanceTaskListType")]
         public string MaintenanceTaskListType { get; set; }
 
-        [JsonPropertyName("TaskList")]
+        [JsonProperty("TaskList")]
         public string TaskList { get; set; }
 
-        [JsonPropertyName("NotificationReferenceDate")]
+        [JsonProperty("NotificationReferenceDate")]
         public DateTime NotificationReferenceDate { get; set; }
 
-        [JsonPropertyName("NotificationReferenceTime")]
+        [JsonProperty("NotificationReferenceTime")]
         public string NotificationReferenceTime { get; set; }
 
-        [JsonPropertyName("NotificationCompletionDate")]
+        [JsonProperty("NotificationCompletionDate")]
         public DateTime? NotificationCompletionDate { get; set; }
 
-        [JsonPropertyName("CompletionTime")]
+        [JsonProperty("CompletionTime")]
         public string CompletionTime { get; set; }
 
-        [JsonPropertyName("AssetRoom")]
+        [JsonProperty("AssetRoom")]
         public string AssetRoom { get; set; }
 
-        [JsonPropertyName("MaintNotifExtReferenceNumber")]
+        [JsonProperty("MaintNotifExtReferenceNumber")]
         public string MaintNotifExtReferenceNumber { get; set; }
 
-        [JsonPropertyName("MaintNotifRejectionReasonCode")]
+        [JsonProperty("MaintNotifRejectionReasonCode")]
         public string MaintNotifRejectionReasonCode { get; set; }
 
-        [JsonPropertyName("MaintNotifRejectionRsnCodeTxt")]
+        [JsonProperty("MaintNotifRejectionRsnCodeTxt")]
         public string MaintNotifRejectionRsnCodeTxt { get; set; }
 
-        [JsonPropertyName("MaintNotifDetectionCatalog")]
+        [JsonProperty("MaintNotifDetectionCatalog")]
         public string MaintNotifDetectionCatalog { get; set; }
 
-        [JsonPropertyName("MaintNotifDetectionCode")]
+        [JsonProperty("MaintNotifDetectionCode")]
         public string MaintNotifDetectionCode { get; set; }
 
-        [JsonPropertyName("MaintNotifDetectionCodeText")]
+        [JsonProperty("MaintNotifDetectionCodeText")]
         public string MaintNotifDetectionCodeText { get; set; }
 
-        [JsonPropertyName("MaintNotifDetectionCodeGroup")]
+        [JsonProperty("MaintNotifDetectionCodeGroup")]
         public string MaintNotifDetectionCodeGroup { get; set; }
 
-        [JsonPropertyName("MaintNotifDetectionCodeGrpTxt")]
+        [JsonProperty("MaintNotifDetectionCodeGrpTxt")]
         public string MaintNotifDetectionCodeGrpTxt { get; set; }
 
-        [JsonPropertyName("MaintNotifProcessPhaseCode")]
+        [JsonProperty("MaintNotifProcessPhaseCode")]
         public string MaintNotifProcessPhaseCode { get; set; }
 
-        [JsonPropertyName("MaintNotifProcessSubPhaseCode")]
+        [JsonProperty("MaintNotifProcessSubPhaseCode")]
         public string MaintNotifProcessSubPhaseCode { get; set; }
 
-        [JsonPropertyName("EAMProcessPhaseCodeDesc")]
+        [JsonProperty("EAMProcessPhaseCodeDesc")]
         public string EAMProcessPhaseCodeDesc { get; set; }
 
-        [JsonPropertyName("EAMProcessSubPhaseCodeDesc")]
+        [JsonProperty("EAMProcessSubPhaseCodeDesc")]
         public string EAMProcessSubPhaseCodeDesc { get; set; }
 
-        [JsonPropertyName("to_Item")]
+        [JsonProperty("to_Item")]
         public ToItem ToItem { get; set; }
 
-        [JsonPropertyName("to_Partner")]
+        [JsonProperty("to_Partner")]
         public NotificationToPartner ToPartner { get; set; }
     }
 
     public class ModelNotification
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public NotificationDetail D { get; set; }
     }
 
     public class ToItem
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public NotificationDeferred Deferred { get; set; }
     }
 
     public class NotificationToPartner
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public NotificationDeferred Deferred { get; set; }
     }
 
     public class ModelNotificationDetail
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public NotificationResult D { get; set; }
     }
 }

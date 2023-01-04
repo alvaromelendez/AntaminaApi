@@ -2,98 +2,98 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace GMM.Application.Models
 {
     public class ModelNotificeClassMaster
     {
-        [JsonPropertyName("Key")]
+        [JsonProperty("Key")]
         public string Key { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
     }
     public class ModelPlanificationGroupMaster
     {
-        [JsonPropertyName("Code")]
+        [JsonProperty("Code")]
         public string Code { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
 
-        [JsonPropertyName("Center")]
+        [JsonProperty("Center")]
         public string Center { get; set; }
     }
     public class ModelJobPositionMaster
     {
-        [JsonPropertyName("Code")]
+        [JsonProperty("Code")]
         public string Code { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
 
-        [JsonPropertyName("Manager")]
+        [JsonProperty("Manager")]
         public string Manager { get; set; }
 
-        [JsonPropertyName("Center")]
+        [JsonProperty("Center")]
         public int Center { get; set; }
 
-        [JsonPropertyName("PlanificationGroup")]
+        [JsonProperty("PlanificationGroup")]
         public string PlanificationGroup { get; set; }
     }
     public class ModelPriorityMaster
     {
-        [JsonPropertyName("Key")]
+        [JsonProperty("Key")]
         public string Key { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
     }
     public class ModelFaultMaster
     {
-        [JsonPropertyName("ObjectPart")]
+        [JsonProperty("ObjectPart")]
         public string ObjectPart { get; set; }
 
-        [JsonPropertyName("key")]
+        [JsonProperty("key")]
         public int key { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
     }
     public class ModelSymptomFaultMaster
     {
-        [JsonPropertyName("SymptomFault")]
+        [JsonProperty("SymptomFault")]
         public string SymptomFault { get; set; }
 
-        [JsonPropertyName("Key")]
+        [JsonProperty("Key")]
         public string Key { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
     }
     public class ModelCauseMaster
     {
-        [JsonPropertyName("Cause")]
+        [JsonProperty("Cause")]
         public string Cause { get; set; }
 
-        [JsonPropertyName("Key")]
+        [JsonProperty("Key")]
         public int Key { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
     }
 
     public class ModelActivityMaster
     {
-        [JsonPropertyName("Activity")]
+        [JsonProperty("Activity")]
         public string Activity { get; set; }
 
-        [JsonPropertyName("Key")]
+        [JsonProperty("Key")]
         public int Key { get; set; }
 
-        [JsonPropertyName("Description")]
+        [JsonProperty("Description")]
         public string Description { get; set; }
     }
 }

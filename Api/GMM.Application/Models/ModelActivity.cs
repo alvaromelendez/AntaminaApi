@@ -1,106 +1,106 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace GMM.Application.Models
 {
     public class ActivityDetail
     {
-        [JsonPropertyName("results")]
+        [JsonProperty("results")]
         public List<ActivityResult> Results { get; set; }
     }
 
     public class ActivityDeferred
     {
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
     }
 
     public class ActivityMetadata
     {
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("uri")]
+        [JsonProperty("uri")]
         public string Uri { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
     }
 
     public class ActivityResult
     {
-        [JsonPropertyName("__metadata")]
+        [JsonProperty("__metadata")]
         public ActivityMetadata Metadata { get; set; }
 
-        [JsonPropertyName("MaintNotificationActivity")]
+        [JsonProperty("MaintNotificationActivity")]
         public string MaintNotificationActivity { get; set; }
 
-        [JsonPropertyName("MaintenanceNotification")]
+        [JsonProperty("MaintenanceNotification")]
         public string MaintenanceNotification { get; set; }
 
-        [JsonPropertyName("MaintenanceNotificationItem")]
+        [JsonProperty("MaintenanceNotificationItem")]
         public string MaintenanceNotificationItem { get; set; }
 
-        [JsonPropertyName("MaintNotifActivitySortNumber")]
+        [JsonProperty("MaintNotifActivitySortNumber")]
         public string MaintNotifActivitySortNumber { get; set; }
 
-        [JsonPropertyName("MaintNotifActyTxt")]
+        [JsonProperty("MaintNotifActyTxt")]
         public string MaintNotifActyTxt { get; set; }
 
-        [JsonPropertyName("MaintNotifActivityCodeGroup")]
+        [JsonProperty("MaintNotifActivityCodeGroup")]
         public string MaintNotifActivityCodeGroup { get; set; }
 
-        [JsonPropertyName("NotifActivityCodeGroupText")]
+        [JsonProperty("NotifActivityCodeGroupText")]
         public string NotifActivityCodeGroupText { get; set; }
 
-        [JsonPropertyName("MaintNotificationActivityCode")]
+        [JsonProperty("MaintNotificationActivityCode")]
         public string MaintNotificationActivityCode { get; set; }
 
-        [JsonPropertyName("NotifActivityCodeText")]
+        [JsonProperty("NotifActivityCodeText")]
         public string NotifActivityCodeText { get; set; }
 
-        [JsonPropertyName("PlannedStartDate")]
+        [JsonProperty("PlannedStartDate")]
         public DateTime PlannedStartDate { get; set; }
 
-        [JsonPropertyName("PlannedStartTime")]
+        [JsonProperty("PlannedStartTime")]
         public string PlannedStartTime { get; set; }
 
-        [JsonPropertyName("PlannedEndDate")]
+        [JsonProperty("PlannedEndDate")]
         public object PlannedEndDate { get; set; }
 
-        [JsonPropertyName("PlannedEndTime")]
+        [JsonProperty("PlannedEndTime")]
         public string PlannedEndTime { get; set; }
 
-        [JsonPropertyName("IsDeleted")]
+        [JsonProperty("IsDeleted")]
         public bool IsDeleted { get; set; }
 
-        [JsonPropertyName("to_Item")]
+        [JsonProperty("to_Item")]
         public ActivityToItem ToItem { get; set; }
 
-        [JsonPropertyName("to_Notif")]
+        [JsonProperty("to_Notif")]
         public ActivityToNotif ToNotif { get; set; }
     }
 
     public class ModelActivity
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public ActivityDetail D { get; set; }
     }
 
     public class ActivityToItem
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public ActivityDeferred Deferred { get; set; }
     }
 
     public class ActivityToNotif
     {
-        [JsonPropertyName("__deferred")]
+        [JsonProperty("__deferred")]
         public ActivityDeferred Deferred { get; set; }
     }
 
     public class ModelActivityCreate
     {
-        [JsonPropertyName("d")]
+        [JsonProperty("d")]
         public ActivityResult D { get; set; }
     }
 }
