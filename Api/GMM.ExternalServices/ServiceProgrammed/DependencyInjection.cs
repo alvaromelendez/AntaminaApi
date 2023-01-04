@@ -33,5 +33,24 @@ namespace GMM.ExternalServices.ServiceProgrammed
             
             return services;
         }
+
+        public static IServiceCollection AddServiceProgrammedV2(this IServiceCollection services, Func<ServiceProgrammedV2Options> options)
+        {
+            var option = options.Invoke();
+            services.AddSingleton(option);
+            services.AddHttpContextAccessor();
+            services.AddHttpClient<IApiServiceProgrammedV2, ApiServiceProgrammedV2>(client =>
+            {
+                client.BaseAddress = new Uri(option.Uri);
+                ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+                client.DefaultRequestHeaders.Clear();
+            });
+            services.AddSingleton<ISecurityServices, SecurityServices>();
+            services.AddSingleton<IAuthentication, Authentication>();
+
+
+
+            return services;
+        }
     }
 }

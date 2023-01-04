@@ -56,4 +56,15 @@ namespace GMM.ExternalServices.ServiceProgrammed.Base
 
 
     }
+
+    public interface IApiServiceProgrammedV2
+    {
+        /// <summary>
+        /// Obtener de forma asincrona los resultados de una pedticionj HTTPGet enviando UserName:UserPassword
+        /// </summary>
+        /// <typeparam name="TypeObject"></typeparam>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        Task<ApiGenericResponse<TypeObject>> GetAsync<TypeObject>(string url) where TypeObject : class;
+    }
 }

@@ -24,4 +24,11 @@ namespace GMM.ExternalServices.ServiceProgrammed
         public string UserName { get; set; }
         public string UserPassword { get; set; }
     }
+
+    public class ServiceProgrammedV2Options
+    {
+        public string Uri { get; set; }
+        public string UserName { get; set; }
+        public string UserPassword { get; set; }
+    }
 }

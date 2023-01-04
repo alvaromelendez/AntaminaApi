@@ -9,7 +9,6 @@ namespace GMM.ExternalServices.ServiceProgrammed.Base
 {
     public class ApiServiceProgrammed : IApiServiceProgrammed
     {
-
         private readonly HttpClient _httpClient;
         private readonly ServiceProgrammedOptions _serviceProgrammed;
         /// <summary>
@@ -128,8 +127,6 @@ namespace GMM.ExternalServices.ServiceProgrammed.Base
             return apiResponse;
 
         }
-
-
         public async Task<ApiGenericResponse<TypeObject>> PostAnonymousAsync<TypeObject>(string url, object entity) 
         {
             ApiGenericResponse<TypeObject> apiResponse = new ApiGenericResponse<TypeObject>();
@@ -156,9 +153,42 @@ namespace GMM.ExternalServices.ServiceProgrammed.Base
             return apiResponse;
 
         }
-
-
-
     }
+    public class ApiServiceProgrammedV2 : IApiServiceProgrammedV2
+    {
+        private readonly HttpClient _httpClient;
+        private readonly ServiceProgrammedV2Options _serviceProgrammed;
+        /// <summary>
+        /// Inicializa una sola vez el HttpClient.
+        /// </summary>
+        /// <param name="httpClient"></param>
+        public ApiServiceProgrammedV2(HttpClient httpClient, ServiceProgrammedV2Options serviceProgrammed)
+        {
+            this._httpClient = httpClient;
+            _serviceProgrammed = serviceProgrammed;
+        }
+        public async Task<ApiGenericResponse<TypeObject>> GetAsync<TypeObject>(string endpoint) where TypeObject : class
+        {
+            ApiGenericResponse<TypeObject> apiResponse = new ApiGenericResponse<TypeObject>();
 
+            using HttpRequestMessage request = new HttpRequestMessage(new HttpMethod("GET"), $"{_serviceProgrammed.Uri}{endpoint}");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes($"{_serviceProgrammed.UserName}:{_serviceProgrammed.UserPassword}")));
+
+            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            using HttpResponseMessage response = await _httpClient.SendAsync(request);
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                apiResponse.IsSuccess = true;
+                apiResponse.Result = JsonConvert.DeserializeObject<TypeObject>(jsonResponse);
+            }
+            else
+                apiResponse.Message = response.ToString();
+
+            return apiResponse;
+
+        }
+    }
 }

@@ -71,6 +71,13 @@ builder.Services.AddServiceProgrammed(() =>
     return configuration.GetSection("ServiceProgrammed")
                     .Get<ServiceProgrammedOptions>();
 });
+
+builder.Services.AddServiceProgrammedV2(() =>
+{
+    return configuration.GetSection("ServiceProgrammedV2")
+                    .Get<ServiceProgrammedV2Options>();
+});
+
 builder.Services.AddAwsS3Antamina(() => 
 {
     return configuration.GetSection("AwsS3Antamina")

@@ -13,8 +13,8 @@ namespace GMM.Application.Handlers.Queries.EquipmentController
         {
             private readonly IUnitOfWork _unitOfWork;
             private readonly IMapper _mapper;
-            private readonly IApiServiceProgrammed _apiServiceProgrammed;
-            public QueryFindAllHandler(IUnitOfWork unitOfWork, IMapper mapper, IApiServiceProgrammed apiServiceProgrammed)
+            private readonly IApiServiceProgrammedV2 _apiServiceProgrammed;
+            public QueryFindAllHandler(IUnitOfWork unitOfWork, IMapper mapper, IApiServiceProgrammedV2 apiServiceProgrammed)
             {
                 this._unitOfWork = unitOfWork;
                 this._mapper = mapper;
@@ -22,12 +22,8 @@ namespace GMM.Application.Handlers.Queries.EquipmentController
             }
             public async Task<Equipment> Handle(QueryFindAll request, CancellationToken cancellationToken)
             {
-                //var response = await _apiServiceProgrammed.GetAsync<Equipment>("sap/opu/odata/sap/API_MAINTNOTIFICATION/MaintenanceNotificationItem(MaintenanceNotification='10000381',MaintenanceNotificationItem='1')/to_ItemCause/?sap-client=110");
-                //var result = _mapper.Map<Equipment>(response.Result);
-                var response = await _apiServiceProgrammed.GetAsync<Equipment>("");
-                response.Result = new Equipment() { Key = 1, Descritption = "HTENG" };
-                var result = _mapper.Map<Equipment>(response.Result);
-                return result;
+                var response = await _apiServiceProgrammed.GetAsync<IEnumerable<ModelEquipment>>("api/Execute/Comando/SAP/GMM/SearchEquipment?InputReq=Equipment:HTENG");
+                return new Equipment() { Equipments = _mapper.Map<IEnumerable<ModelEquipment>>(response.Result) };
             }
         }
     }
