@@ -46,6 +46,8 @@ namespace GMM.Api.Controllers
                     return Ok(GetModelActivity());
                 case MasterTableType.SymptomFault:
                     return Ok(GetModelSymptomFault());
+                case MasterTableType.SystemStatus:
+                    return Ok(GetModelSystemStatus());
                 default:
                     break;
             }
@@ -90,6 +92,11 @@ namespace GMM.Api.Controllers
         {
             string data = @"[{""Activity"":""PM1"",""Key"":1,""Description"":""Actividad 1""},{""Activity"":""PM1"",""Key"":2,""Description"":""Actividad 2""}]";
             return System.Text.Json.JsonSerializer.Deserialize<List<ModelActivityMaster>>(data);
+        }
+        private List<ModelNotificeClassMaster> GetModelSystemStatus()
+        {
+            string data = @"[{""Key"":""MEAB"",""Description"":""Mensaje abierto""},{""Key"":""METR"",""Description"":""Mensaje de tratamiento""},{""Key"":""ORAS"",""Description"":""Orden asignada""},{""Key"":""MECE"",""Description"":""Mensaje cerrado""}]";
+            return System.Text.Json.JsonSerializer.Deserialize<List<ModelNotificeClassMaster>>(data);
         }
 
         [HttpGet("FindAll")]
@@ -141,6 +148,7 @@ namespace GMM.Api.Controllers
         Fault,
         Cause,
         Activity,
-        SymptomFault
+        SymptomFault,
+        SystemStatus
     }
 }
