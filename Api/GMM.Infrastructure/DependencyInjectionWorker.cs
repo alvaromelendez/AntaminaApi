@@ -44,11 +44,13 @@ namespace GMM.Infrastructure
             services.AddTransient<IMasterTableRepository, MasterTableRepository>();
             services.AddTransient<IProccessRepository, ProccessRepository>();
             services.AddTransient<IProccessConfigurationRepository, ProccessConfigurationRepository>();
-
+            services.AddTransient<INotificationClassRepository, NotificationClassRepository>();
+            services.AddTransient<IPlanningGroupRepository, PlanningGroupRepository>();
+            services.AddTransient<IJobPositionRepository, JobPositionRepository>();
             services.AddTransient<IMasterTableServices, MasterTableServices>();
-
-
-
+            services.AddTransient<IPriorityRepository, PriorityRepository>();
+            services.AddTransient<ICauseRepository, CauseRepository>();
+            services.AddTransient<IActivityRepository, ActivityRepository>();
             return services;
         }
     }

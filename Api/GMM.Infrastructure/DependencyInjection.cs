@@ -41,11 +41,14 @@ namespace GMM.Infrastructure
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<IMasterTableRepository, MasterTableRepository>();
-
+            services.AddScoped<INotificationClassRepository, NotificationClassRepository>();
+            services.AddScoped<IPlanningGroupRepository, PlanningGroupRepository>();
+            services.AddScoped<IJobPositionRepository, JobPositionRepository>();
+            services.AddScoped<IPriorityRepository, PriorityRepository>();
+            services.AddScoped<ICauseRepository, CauseRepository>();
+            services.AddScoped<IActivityRepository, ActivityRepository>();
 
             services.AddScoped<IMasterTableServices, MasterTableServices>();
-
-
 
             return services;
         }

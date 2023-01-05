@@ -66,6 +66,21 @@ namespace GMM.Infrastructure.Repositories
         public IGenericRepository<ProccessConfiguration> ProccessConfigurations =>
             this._serviceProvider.GetRequiredService<IGenericRepository<ProccessConfiguration>>();
 
+        public IGenericRepository<NotificationClass> NotificationClass =>
+            this._serviceProvider.GetRequiredService<IGenericRepository<NotificationClass>>();
+
+        public IGenericRepository<PlanningGroup> PlanningGroups =>
+            this._serviceProvider.GetRequiredService<IGenericRepository<PlanningGroup>>();
+
+        public IGenericRepository<JobPosition> JobPositions =>
+            this._serviceProvider.GetRequiredService<IGenericRepository<JobPosition>>();
+
+        public IGenericRepository<Priority> Prioritys =>
+            this._serviceProvider.GetRequiredService<IGenericRepository<Priority>>();
+
+        public IGenericRepository<Cause> Causes =>
+            this._serviceProvider.GetRequiredService<IGenericRepository<Cause>>();
+
         #endregion
 
 

@@ -9,6 +9,7 @@ namespace GMM.Application.Interfaces.Repositories
         IGenericRepository<Fault> Faults { get; }
 
         IGenericRepository<Activity> Activities { get; }
+        IGenericRepository<Cause> Causes { get; }
 
         IGenericRepository<Document> Documents { get; }
 
@@ -19,7 +20,12 @@ namespace GMM.Application.Interfaces.Repositories
         IGenericRepository<UploadFile> UploadFiles { get;  }
 
         IGenericRepository<MasterTable> MasterTables { get; }
-         
+
+        IGenericRepository<NotificationClass> NotificationClass { get; }
+        IGenericRepository<JobPosition> JobPositions { get; }
+        IGenericRepository<PlanningGroup> PlanningGroups { get; }
+        IGenericRepository<Priority> Prioritys { get; }
+
         IGenericRepository<Person> Persons { get; }
          
         IGenericRepository<PersonFile> PersonFiles { get; }
