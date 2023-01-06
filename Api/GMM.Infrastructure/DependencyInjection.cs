@@ -47,7 +47,8 @@ namespace GMM.Infrastructure
             services.AddScoped<IPriorityRepository, PriorityRepository>();
             services.AddScoped<ICauseRepository, CauseRepository>();
             services.AddScoped<IActivityRepository, ActivityRepository>();
-
+            services.AddScoped<ISymptomFaultRepository, SymptomFaultRepository>();
+            services.AddScoped<IFaultRepository, FaultRepository>();
             services.AddScoped<IMasterTableServices, MasterTableServices>();
 
             return services;

@@ -2,16 +2,13 @@
 {
     public class Fault : IGenerateEntity<Fault>
     {
-        public Guid IdFault { get; set; }
-        public DateTime StartDate { get; set; }
-        public string StartTime { get; set; }
-        public DateTime EndDate { get; set; }
-        public string EndTime { get; set; }
-        public bool Stop { get; set; }
-        public string StopDuration { get; set; }        
+        public int Id { get; set; }
+        public string ObjectPart { get; set; }
+        public int Key { get; set; }
+        public string Description { get; set; }
         public Fault RecoverKey()
         {
-            return new Fault() { IdFault = this.IdFault };
+            return new Fault() { Id = this.Id };
         }
     }
 }

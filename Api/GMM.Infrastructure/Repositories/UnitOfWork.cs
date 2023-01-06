@@ -81,6 +81,9 @@ namespace GMM.Infrastructure.Repositories
         public IGenericRepository<Cause> Causes =>
             this._serviceProvider.GetRequiredService<IGenericRepository<Cause>>();
 
+        public IGenericRepository<SymptomFault> SymptomFaults =>
+            this._serviceProvider.GetRequiredService<IGenericRepository<SymptomFault>>();
+
         #endregion
 
 

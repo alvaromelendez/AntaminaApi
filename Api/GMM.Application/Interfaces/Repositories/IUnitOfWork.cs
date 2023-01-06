@@ -7,6 +7,7 @@ namespace GMM.Application.Interfaces.Repositories
     public interface IUnitOfWork
     {
         IGenericRepository<Fault> Faults { get; }
+        IGenericRepository<SymptomFault> SymptomFaults { get; }
 
         IGenericRepository<Activity> Activities { get; }
         IGenericRepository<Cause> Causes { get; }

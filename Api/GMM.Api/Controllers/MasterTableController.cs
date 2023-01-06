@@ -20,12 +20,16 @@ namespace GMM.Api.Controllers
         private readonly IPriorityRepository _priorityRepository;
         private readonly ICauseRepository _causeRepository;
         private readonly IActivityRepository _activityRepository;
+        private readonly IFaultRepository _faultRepository;
+        private readonly ISymptomFaultRepository _symptomFaultRepository;
         public MasterTableController(INotificationClassRepository notificationClassRepository,
             IPlanningGroupRepository planningGroupRepository,
             IJobPositionRepository jobPositionRepository,
             IPriorityRepository priorityRepository,
             ICauseRepository causeRepository,
-            IActivityRepository activityRepository)
+            IActivityRepository activityRepository,
+            IFaultRepository faultRepository,
+            ISymptomFaultRepository symptomFaultRepository)
         {
             _notificationClassRepository = notificationClassRepository;
             _planningGroupRepository = planningGroupRepository;
@@ -33,48 +37,46 @@ namespace GMM.Api.Controllers
             _priorityRepository = priorityRepository;
             _causeRepository = causeRepository;
             _activityRepository = activityRepository;
+            _faultRepository = faultRepository;
+            _symptomFaultRepository = symptomFaultRepository;
         }
 
-        [HttpGet("NotificationClassFindAll")]
-        public async Task<IActionResult> NotificationClassFindAll()
+        [HttpGet("FindId/{idMasterTable}")]
+        public async Task<IActionResult> FindId(int idMasterTable)
         {
-            var response  = await _notificationClassRepository.FindAll();
-            return Ok(response);
+            switch ((MasterTableType)idMasterTable)
+            {
+                case MasterTableType.NotificationCLass:
+                    return Ok(await _notificationClassRepository.FindAll());
+                case MasterTableType.PlanificationGroup:
+                    return Ok(await _planningGroupRepository.FindAll());
+                case MasterTableType.JobPosition:
+                    return Ok(await _jobPositionRepository.FindAll());
+                case MasterTableType.Priority:
+                    return Ok(await _priorityRepository.FindAll());
+                case MasterTableType.Fault:
+                    return Ok(await _faultRepository.FindAll());
+                case MasterTableType.Cause:
+                    return Ok(await _causeRepository.FindAll());
+                case MasterTableType.Activity:
+                    return Ok(await _activityRepository.FindAll());
+                case MasterTableType.SymptomFault:
+                    return Ok(await _symptomFaultRepository.FindAll());
+                default:
+                    break;
+            }
+            return BadRequest();
         }
-
-        [HttpGet("PlanningGroupFindAll")]
-        public async Task<IActionResult> PlanningGroupFindAll()
-        {
-            var response = await _planningGroupRepository.FindAll();
-            return Ok(response);
-        }
-
-        [HttpGet("JobPositionFindAll")]
-        public async Task<IActionResult> JobPositionFindAll()
-        {
-            var response = await _jobPositionRepository.FindAll();
-            return Ok(response);
-        }
-
-        [HttpGet("PriorityFindAll")]
-        public async Task<IActionResult> PriorityFindAll()
-        {
-            var response = await _priorityRepository.FindAll();
-            return Ok(response);
-        }
-
-        [HttpGet("CauseFindAll")]
-        public async Task<IActionResult> CauseFindAll()
-        {
-            var response = await _causeRepository.FindAll();
-            return Ok(response);
-        }
-
-        [HttpGet("ActivityFindAll")]
-        public async Task<IActionResult> ActivityFindAll()
-        {
-            var response = await _activityRepository.FindAll();
-            return Ok(response);
-        }
+    }
+    public enum MasterTableType
+    {
+        NotificationCLass,
+        PlanificationGroup,
+        JobPosition,
+        Priority,
+        Fault,
+        Cause,
+        Activity,
+        SymptomFault
     }
 }

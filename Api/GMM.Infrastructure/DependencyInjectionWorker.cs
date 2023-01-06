@@ -40,7 +40,6 @@ namespace GMM.Infrastructure
             //agregamos todos los repositoprios genéricos en una sola linea.
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-
             services.AddTransient<IMasterTableRepository, MasterTableRepository>();
             services.AddTransient<IProccessRepository, ProccessRepository>();
             services.AddTransient<IProccessConfigurationRepository, ProccessConfigurationRepository>();
@@ -51,6 +50,8 @@ namespace GMM.Infrastructure
             services.AddTransient<IPriorityRepository, PriorityRepository>();
             services.AddTransient<ICauseRepository, CauseRepository>();
             services.AddTransient<IActivityRepository, ActivityRepository>();
+            services.AddTransient<ISymptomFaultRepository, SymptomFaultRepository>();
+            services.AddTransient<IFaultRepository, FaultRepository>();
             return services;
         }
     }
