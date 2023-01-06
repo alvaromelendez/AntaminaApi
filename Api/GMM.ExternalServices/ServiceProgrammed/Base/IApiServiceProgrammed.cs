@@ -54,7 +54,13 @@ namespace GMM.ExternalServices.ServiceProgrammed.Base
         /// <returns></returns>
         Task<ApiGenericResponse<TypeObject>> PostAnonymousAsync<TypeObject>(string url, object entity);
 
-
+        /// <summary>
+        /// Obtener de forma asincrona los resultados de una pedticionj HTTPGet enviando UserName:UserPassword
+        /// </summary>
+        /// <typeparam name="TypeObject"></typeparam>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        Task<string> GetToken(string endpoint);
     }
 
     public interface IApiServiceProgrammedV2

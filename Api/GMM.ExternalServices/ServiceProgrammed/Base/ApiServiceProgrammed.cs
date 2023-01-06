@@ -2,7 +2,9 @@
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Reflection.PortableExecutable;
 using System.Text;
+using System.Threading;
 using System.Xml.Linq;
 
 namespace GMM.ExternalServices.ServiceProgrammed.Base
@@ -151,6 +153,24 @@ namespace GMM.ExternalServices.ServiceProgrammed.Base
                 apiResponse.Message = response.ToString();
 
             return apiResponse;
+
+        }
+        public async Task<string> GetToken(string endpoint)
+        {
+            string token = string.Empty;
+            using HttpRequestMessage request = new HttpRequestMessage(new HttpMethod("GET"), $"{_serviceProgrammed.Uri}{endpoint}");
+            request.Headers.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes($"{_serviceProgrammed.UserName}:{_serviceProgrammed.UserPassword}")));
+            request.Headers.Add("X-CSRF-Token", "Fetch");
+            request.Headers.Add("Cookie", "Cookie_1=value; SAP_SESSIONID_DS4_110=G6kiKinwd7BA5xjV1IF6AioOIqOOAxHtn3USHVl-nzU%3d; sap-usercontext=sap-client=110");
+
+            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            using HttpResponseMessage response = await _httpClient.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                token = response.Headers.GetValues("x-csrf-token").FirstOrDefault();
+            }
+            return token;
 
         }
     }

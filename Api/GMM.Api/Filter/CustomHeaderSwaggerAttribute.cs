@@ -10,6 +10,7 @@ namespace GMM.Api.Filter
             "api/Test/SerializeObject",
             "api/Test/GetUserToken",
             "api/Test/Prueba",
+            "api/Notification/GetToken"
         };
 
         public void Apply(OpenApiOperation operation, OperationFilterContext context)

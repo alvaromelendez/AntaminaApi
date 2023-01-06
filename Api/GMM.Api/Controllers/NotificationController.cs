@@ -45,11 +45,11 @@ namespace GMM.Api.Controllers
             return Ok(result);
         }
 
-        //[HttpDelete("Delete/{idNotification}")]
-        //public async Task<IActionResult> Delete(Guid idNotification)
-        //{
-        //    var result = await _mediator.Send(new CommandDelete(idNotification));
-        //    return Ok(result);
-        //}
+        [HttpGet("GetToken")]
+        public async Task<IActionResult> GetToken()
+        {
+            var result = await _mediator.Send(new QueryToken());
+            return Ok(result);
+        }
     }
 }
